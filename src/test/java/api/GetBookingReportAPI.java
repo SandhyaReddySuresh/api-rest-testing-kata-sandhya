@@ -4,7 +4,7 @@ import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
 import org.junit.Assert;
-import pojo.GetRoomIdDetails;
+import pojo.*;
 import utils.Utils;
 
 import java.io.IOException;
@@ -17,8 +17,9 @@ public class GetBookingReportAPI extends Utils {
 
     public static Response getBookingReportAPI_Call(String resourceDetails) throws IOException {
 
-
+        String tokenValue = AdminAuthAPI.checkTokenDetails();
         requestSpec=given()
+                .header("Cookie", "token=" + tokenValue)
                 .spec(requestSpecification())
                 .log().all();
 
@@ -40,5 +41,15 @@ public class GetBookingReportAPI extends Utils {
         String statusCodeResponse= String.valueOf(response.statusCode());
         Assert.assertEquals("Success status response",statusCodeResponse,statusCode);
 
+    }
+    public static void getBookingReportSummaryAPI_Response() {
+        ReportSummary reportSummary = response.as(ReportSummary.class);
+        for (Report report : reportSummary.getReport()) {
+            Assert.assertNotNull("Start should not be null", report.getStart());
+            Assert.assertNotNull("End should not be null", report.getEnd());
+            Assert.assertNotNull("Title should not be null", report.getTitle());
+
+
+        }
     }
 }
