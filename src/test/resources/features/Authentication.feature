@@ -34,3 +34,11 @@ Feature: Hotel booking login
       | admin    | password |
     Then the login should be successful
     And the response should conform to the expected schema
+
+  Scenario: Validate authentication response with invalid schema
+
+    When the admin enters an incorrect password
+      | username | password |
+      | admin1   | 2        |
+    Then the login should fail
+    And the response should fail schema validation

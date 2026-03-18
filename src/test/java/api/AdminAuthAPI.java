@@ -58,7 +58,14 @@ public class AdminAuthAPI extends Utils {
 
       public static void checkSchemaValidation()
       {
+        try {
+            validateJsonSchema(response, "schema/login-schema.json");
+        }
+        catch (AssertionError e)
+        {
+            Assert.fail("Schema validation correctly failed: " + e.getMessage());
 
-          validateJsonSchema(response,"schema/login-schema.json");
+        }
+        }
       }
-    }
+

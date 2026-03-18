@@ -67,4 +67,10 @@ public class AuthenticationAPISteps {
         AdminAuthAPI.checkSchemaValidation();
 
     }
+
+    @And("the response should fail schema validation")
+    public void theResponseShouldFailSchemaValidation() {
+        AdminAuthAPI.checkSchemaValidation();
+
+    }
 }
