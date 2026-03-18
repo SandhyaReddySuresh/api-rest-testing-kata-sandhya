@@ -20,3 +20,9 @@ Feature: Fetch all rooms
       | description |
       | features    |
       | roomPrice   |
+
+  Scenario: Validate rooms response against JSON schema
+    When the user sends a GET request to fetch rooms from the system
+    Then the system should return a successful response
+    And the response should contain a list of rooms
+    And the response body should conform to the expected JSON schema

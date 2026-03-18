@@ -1,13 +1,14 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "description": "",
   "type": "object",
+  "required": ["rooms"],
   "properties": {
     "rooms": {
       "type": "array",
-      "uniqueItems": true,
       "minItems": 1,
+      "uniqueItems": true,
       "items": {
+        "type": "object",
         "required": [
           "roomid",
           "roomName",
@@ -15,6 +16,7 @@
           "accessible",
           "image",
           "description",
+          "features",
           "roomPrice"
         ],
         "properties": {
@@ -42,19 +44,19 @@
           },
           "features": {
             "type": "array",
+            "minItems": 1,
             "items": {
-              "required": [],
-              "properties": {}
+              "type": "string",
+              "minLength": 1
             }
           },
           "roomPrice": {
             "type": "number"
           }
-        }
+        },
+        "additionalProperties": false
       }
     }
   },
-  "required": [
-    "rooms"
-  ]
+  "additionalProperties": false
 }

@@ -91,5 +91,17 @@ public class ListOfRoomsAPI extends Utils {
             }
         }
         }
+
+    public static void checkSchemaValidation()
+    {
+        try {
+            validateJsonSchema(response, "schema/listOfRooms-schema.json");
+        }
+        catch (AssertionError e)
+        {
+            Assert.fail("Schema validation correctly failed: " + e.getMessage());
+
+        }
+    }
     }
 

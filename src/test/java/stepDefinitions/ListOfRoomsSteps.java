@@ -37,4 +37,9 @@ public class ListOfRoomsSteps {
         List<String> expectedFields = dataTable.asList();
        ListOfRoomsAPI.verifyEachRoomsDetails_FromResponse(expectedFields);
     }
+
+    @And("the response body should conform to the expected JSON schema")
+    public void theResponseBodyShouldConformToTheExpectedJSONSchema() {
+      ListOfRoomsAPI.checkSchemaValidation();
+    }
 }
