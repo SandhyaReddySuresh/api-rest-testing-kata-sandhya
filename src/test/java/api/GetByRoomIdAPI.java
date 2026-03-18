@@ -5,6 +5,7 @@ import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
 import org.junit.Assert;
 import pojo.GetRoomIdDetails;
+import pojo.Rooms;
 import utils.Utils;
 
 import java.io.IOException;
@@ -114,4 +115,35 @@ public class GetByRoomIdAPI extends Utils {
             }
         }
     }
+
+    public static void verifyRoomFeaturesDetails_FromResponse(List<String> expectedFields ) {
+        List<String> features =roomDetails.getFeatures();
+        Assert.assertNotNull("Feature should not be null", roomDetails.getFeatures());
+
+        for (String field : expectedFields) {
+                switch (field) {
+                    case "Radio":
+                        Assert.assertTrue("Feature TV should be present", features.contains("Radio"));
+                        break;
+                    case "WiFi":
+                        Assert.assertTrue("Feature WiFi should be present", features.contains("WiFi"));
+                        break;
+                    case "Safe":
+                        Assert.assertTrue("Feature Safe should be present", features.contains("Safe"));
+                        break;
+                }
+            }
+        }
+
+    public static void verifyRoomDescriptionDetails_FromResponse() {
+        Assert.assertNotNull("Description should not be null", roomDetails.getDescription());
+
     }
+
+    public static void verifyRoomImageDetails_FromResponse() {
+        Assert.assertNotNull("Image should not be null", roomDetails.getImage());
+
+    }
+    }
+
+

@@ -30,9 +30,9 @@ Feature: View Room Details
       | Room Type  | (any)  |
       | Accessible | Yes/No |
       | Price      | (any)  |
-#    And the room should include features such as:
-#      | TV   |
-#      | WiFi |
-#      | Safe |
-#    And the room should have a description explaining it
-#    And the room should have an image to view
+    And the room should include features such as:
+      | Radio |
+      | WiFi  |
+      | Safe  |
+    And the room should have a description explaining it
+    And the room should have an image to view

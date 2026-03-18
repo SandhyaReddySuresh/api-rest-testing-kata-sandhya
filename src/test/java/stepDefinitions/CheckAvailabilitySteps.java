@@ -45,4 +45,6 @@ public class CheckAvailabilitySteps {
     public void roomAvailabilityInformationIsReturnedInAFormatCompliantWithTheJSONSchema() {
         CheckAvailabilityAPI.checkSchemaValidation();
     }
+
+
 }

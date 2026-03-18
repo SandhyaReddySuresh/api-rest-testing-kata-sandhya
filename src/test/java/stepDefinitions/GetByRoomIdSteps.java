@@ -3,6 +3,7 @@ package stepDefinitions;
 import api.GetByRoomIdAPI;
 import api.ListOfRoomsAPI;
 import io.cucumber.datatable.DataTable;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -38,7 +39,20 @@ public class GetByRoomIdSteps {
         GetByRoomIdAPI.verifyRoomsDetailsPresentInResponse();
         GetByRoomIdAPI.validateRoomsDetailsFromResponse(rows,roomIdFromListOfRoom);
 
+    }
 
+    @And("the room should include features such as:")
+    public void theRoomShouldIncludeFeaturesSuchAs(DataTable dataTable) {
+        List<String> expectedFields = dataTable.asList();
+        GetByRoomIdAPI.verifyRoomFeaturesDetails_FromResponse(expectedFields);
+    }
+    @And("the room should have a description explaining it")
+    public void theRoomShouldHaveADescriptionExplainingIt() {
+        GetByRoomIdAPI.verifyRoomDescriptionDetails_FromResponse();
+    }
 
+    @And("the room should have an image to view")
+    public void theRoomShouldHaveAnImageToView() {
+        GetByRoomIdAPI.verifyRoomImageDetails_FromResponse();
     }
 }
