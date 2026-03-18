@@ -107,4 +107,16 @@ public class CheckAvailabilityAPI extends Utils {
                 actualErrorMessage
         );
     }
+
+    public static void checkSchemaValidation()
+    {
+        try {
+            validateJsonSchema(response, "schema/checkAvailability-schema.json");
+        }
+        catch (AssertionError e)
+        {
+            Assert.fail("Schema validation correctly failed: " + e.getMessage());
+
+        }
+    }
 }

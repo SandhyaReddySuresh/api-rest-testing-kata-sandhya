@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Rooms",
+  "type": "object",
+  "properties": {
+    "rooms": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "roomid": {
+            "type": "integer",
+            "description": "Unique ID of the room"
+          },
+          "roomName": {
+            "type": "string",
+            "description": "Room number or name"
+          },
+          "type": {
+            "type": "string",
+            "enum": ["Single", "Double", "Suite"],
+            "description": "Type of the room"
+          },
+          "accessible": {
+            "type": "boolean",
+            "description": "Whether the room is accessible"
+          },
+          "image": {
+            "type": "string",
+            "format": "uri",
+            "description": "Path or URL to the room image"
+          },
+          "description": {
+            "type": "string",
+            "description": "Description of the room"
+          },
+          "features": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": ["TV", "WiFi", "Safe", "Radio"]
+            },
+            "description": "List of features available in the room"
+          },
+          "roomPrice": {
+            "type": "number",
+            "minimum": 0,
+            "description": "Price per night in USD"
+          }
+        },
+        "required": ["roomid", "roomName", "type", "accessible", "image", "description", "features", "roomPrice"]
+      }
+    }
+  },
+  "required": ["rooms"]
+}
