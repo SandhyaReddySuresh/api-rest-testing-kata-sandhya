@@ -87,4 +87,15 @@ public class CreateBookingAPI extends Utils {
     {
       Utils.checkErrorMessage(response,expectedMessage);
     }
+    public static void checkSchemaValidation(String schemaJson)
+    {
+        try {
+            validateJsonSchema(response, "schema/" + schemaJson);
+        }
+        catch (AssertionError e)
+        {
+            Assert.fail("Schema validation correctly failed: " + e.getMessage());
+
+        }
+    }
 }

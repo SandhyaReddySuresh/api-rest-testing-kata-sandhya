@@ -55,4 +55,9 @@ public class CreateBookingSteps {
         CreateBookingAPI.checkErrorMessage(errorMessage);
 
     }
+
+    @And("the response body should match the expected JSON schema {string}")
+    public void theResponseBodyShouldMatchTheExpectedJSONSchema(String schemaJson) {
+        CreateBookingAPI.checkSchemaValidation(schemaJson);
+    }
 }
