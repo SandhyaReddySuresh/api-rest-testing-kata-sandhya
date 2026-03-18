@@ -103,5 +103,21 @@ public class ListOfRoomsAPI extends Utils {
 
         }
     }
+
+    public static Response getListOfRooms_Invalid(String resourceDetails) throws IOException {
+
+
+        requestSpec=given().spec(requestSpecification())
+                .log().all();
+
+        response = requestSpec
+                .when()
+                .get(resourceDetails)
+                .then()
+                .log().all()
+                .extract().response();
+        return response;
+
+    }
     }
 

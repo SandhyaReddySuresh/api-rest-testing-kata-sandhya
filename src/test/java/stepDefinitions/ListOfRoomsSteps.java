@@ -42,4 +42,17 @@ public class ListOfRoomsSteps {
     public void theResponseBodyShouldConformToTheExpectedJSONSchema() {
       ListOfRoomsAPI.checkSchemaValidation();
     }
+
+    @When("the user sends a request to an incorrect API endpoint")
+    public void theUserSendsARequestToAnIncorrectAPIEndpoint() throws IOException {
+        String resourceDetails="InvalidResourceListOfRoomsAPI";
+        APIResources resourcesAPI=APIResources.valueOf(resourceDetails);
+        ListOfRoomsAPI.getListOfRooms_Invalid(resourcesAPI.getResources());
+    }
+
+    @Then("the system should return resource not found")
+    public void theSystemShouldReturnResourceNotFound() throws IOException {
+        int statusCode= ConfigReader.getIntProperty("NotFound");
+        ListOfRoomsAPI.checkStatusCode(String.valueOf(statusCode));
+    }
 }

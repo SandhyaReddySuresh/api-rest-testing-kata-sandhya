@@ -26,3 +26,8 @@ Feature: Fetch all rooms
     Then the system should return a successful response
     And the response should contain a list of rooms
     And the response body should conform to the expected JSON schema
+
+  Scenario: User accesses an invalid resource
+    When the user sends a request to an incorrect API endpoint
+    Then the system should return resource not found
+
