@@ -6,10 +6,12 @@ import io.restassured.specification.ResponseSpecification;
 import org.junit.Assert;
 import payloadDetails.AdminAuthPayload;
 import utils.Utils;
+import static io.restassured.RestAssured.*;
 
 import java.io.IOException;
 
 import static io.restassured.RestAssured.given;
+import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 
 public class AdminAuthAPI extends Utils {
     public static RequestSpecification requestSpec;
@@ -53,4 +55,10 @@ public class AdminAuthAPI extends Utils {
         String errorMessage=getJsonPath(response,"error");
         Assert.assertNotNull("Failed to create booking",errorMessage);
     }
-}
+
+      public static void checkSchemaValidation()
+      {
+
+          validateJsonSchema(response,"schema/login-schema.json");
+      }
+    }

@@ -15,23 +15,23 @@ Body:
     "password": "password"
 }
 HTTP/1.1 200 OK
-Date: Wed, 18 Mar 2026 11:59:09 GMT
+Date: Wed, 18 Mar 2026 12:43:51 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
 Server: cloudflare
 vary: rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch
 x-railway-edge: railway/europe-west4-drams3a
-x-railway-request-id: ubrFWTSSSzyDGQ0IjUJq2g
+x-railway-request-id: L7q27l9HQtuipR_b0-QtfA
 cf-cache-status: DYNAMIC
 Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
-Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=hPJ5YXLm%2F7vqdkgXvnAJL4w9oK28R7YMjSd38nSnVZ6CuOHoa%2FXdYp%2BkSFdxCOdzy8pRVcNw9%2FBYYS1UFBMmN74cC6QXNXBSpjfgNXKVfG418vX70tK7x6aC"}]}
+Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=LFdivH8rB9O42msQsb4owG0JiEBzDTFDba8t9yFakb7pP0zjZLfTvPIK0smdgbyMkfXxNNo%2BHoa9cuQa%2FHx3MGb0cVpRyHQQSK0urCHdYeVKBXtkunq4lR%2Bz"}]}
 Content-Encoding: gzip
-CF-RAY: 9de411d3abf60279-CDG
+CF-RAY: 9de4534a0f069ece-CDG
 alt-svc: h3=":443"; ma=86400
 
 {
-    "token": "6do0pPDelER9z4kk"
+    "token": "O9SHePdB91M31SRm"
 }
 Request method:	POST
 Request URI:	https://automationintesting.online/api/auth/login
@@ -50,18 +50,18 @@ Body:
     "password": "password1"
 }
 HTTP/1.1 401 Unauthorized
-Date: Wed, 18 Mar 2026 11:59:10 GMT
+Date: Wed, 18 Mar 2026 12:43:51 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
 Server: cloudflare
 vary: rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch
 x-railway-edge: railway/europe-west4-drams3a
-x-railway-request-id: Y5NRCCmRSp-FH_ns5nX1uw
+x-railway-request-id: mXYjr5vGRCm_i6xf21mRUA
 cf-cache-status: DYNAMIC
 Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
-Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=IgUqBxpBOrZIt3732X%2BWBt8nw9ghqVzxsqS3aKR%2BQwjE2h4YsKpXrOrh6H5bVZYns77xibEtZpJ4iTwIuGPa8w5gSWopcrhcopGhN6YdST75kp8%2FtoT5YYIn"}]}
-CF-RAY: 9de411da1f1fbb81-CDG
+Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=aMmd%2B7mdiXvL%2Bs7CZ8DdVdaNmc4qYX80ou3sFwCw34T%2BdILJCG%2FuWKYMlEDvBUvuA4qiYTuzOo1lrxiau8uCArzelTe5PDPJ1J3o8k7Ym3sxC38a1LHCcmrq"}]}
+CF-RAY: 9de4535108631bec-CDG
 alt-svc: h3=":443"; ma=86400
 
 {
@@ -84,20 +84,55 @@ Body:
     "password": "password2"
 }
 HTTP/1.1 401 Unauthorized
-Date: Wed, 18 Mar 2026 11:59:10 GMT
+Date: Wed, 18 Mar 2026 12:43:52 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
 Server: cloudflare
 vary: rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch
 x-railway-edge: railway/europe-west4-drams3a
-x-railway-request-id: 18KpRoHUTLGh6ezurJsmnA
+x-railway-request-id: T_2zv7kTR8S7aX9Y0-QtfA
 cf-cache-status: DYNAMIC
 Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
-Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=leqhhjaB4poAQAgGiNldEf8f4NBx6kbeOjQRWgsAmLvMxtWyhd5A0NET3%2FwiIs3KG%2BLsLhFOtR4VTF3oyz7mdLwiiRRpiudu4GBoF%2BcMoAumn%2Fp0WtlOTdfQ"}]}
-CF-RAY: 9de411dc1fabbb18-CDG
+Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=Nozm1oWWOXqkEHRDxC%2BvgaCVe670bot98Lg%2FG6s6wQfWojzIxHKMQE%2F3jqUBEI%2Fsmrd1n9wWRRTnUj%2BABeIrfIyIxmqWXWK63WKNn576wbi%2Fo4iD2humMdUC"}]}
+CF-RAY: 9de4535268c2f12c-CDG
 alt-svc: h3=":443"; ma=86400
 
 {
     "error": "Invalid credentials"
+}
+Request method:	POST
+Request URI:	https://automationintesting.online/api/auth/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "username": "admin",
+    "password": "password"
+}
+HTTP/1.1 200 OK
+Date: Wed, 18 Mar 2026 12:43:52 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Server: cloudflare
+vary: rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch
+x-railway-edge: railway/europe-west4-drams3a
+x-railway-request-id: t3W-20DpR6OcE4z4YqdHTg
+cf-cache-status: DYNAMIC
+Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=K%2FBn32nfpIKxBXkBX5eonuh3Iq3J5xRJANJvm7gj7zS%2BGVAF9kmDAehBBxZrowwSUm%2B%2BKksgSgflc01%2FxQmKXukYiO%2Bbhd5oamotTGSX%2F0H7lR0es8f%2BFS6I"}]}
+Content-Encoding: gzip
+CF-RAY: 9de45353ef89f533-CDG
+alt-svc: h3=":443"; ma=86400
+
+{
+    "token": "fBNUZGdbZN1f1wV4"
 }

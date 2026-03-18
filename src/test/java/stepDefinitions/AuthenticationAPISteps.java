@@ -3,10 +3,7 @@ package stepDefinitions;
 import api.AdminAuthAPI;
 import check.HealthCheck;
 import io.cucumber.datatable.DataTable;
-import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
+import io.cucumber.java.en.*;
 import utils.APIResources;
 import utils.ConfigReader;
 
@@ -62,6 +59,12 @@ public class AuthenticationAPISteps {
     @And("the admin should see an error message saying the credentials are invalid")
     public void theAdminShouldSeeAnErrorMessageSayingTheCredentialsAreInvalid() {
         AdminAuthAPI.checkErrorMessage_ForUnUnauthorizedUser();
+
+    }
+
+    @And("the response should conform to the expected schema")
+    public void theResponseShouldConformToTheExpectedSchema() {
+        AdminAuthAPI.checkSchemaValidation();
 
     }
 }

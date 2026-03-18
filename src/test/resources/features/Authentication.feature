@@ -15,6 +15,7 @@ Feature: Hotel booking login
       | admin    | password |
     Then the login should be successful
     And the users should receive an authentication token
+
    @Authentication @FailureLogin
    Scenario Outline:Admin tries to log in with an invalid password
     When the admin enters an incorrect password
@@ -26,3 +27,10 @@ Feature: Hotel booking login
       | username | password  |
       | admin2   | password1 |
       | admin3   | password2 |
+
+  Scenario: Validate authentication response schema with valid structure
+    When the admin enters the correct username and password
+      | username | password |
+      | admin    | password |
+    Then the login should be successful
+    And the response should conform to the expected schema
