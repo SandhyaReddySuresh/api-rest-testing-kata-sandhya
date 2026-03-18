@@ -42,4 +42,26 @@ public class AuthenticationAPISteps {
         AdminAuthAPI.checkTokenDetails();
 
     }
+
+    @When("the admin enters an incorrect password")
+    public void theAdminEntersAnIncorrectPassword(DataTable dataTable) throws IOException {
+        Map<String, String> data = dataTable.asMaps(String.class, String.class).get(0);
+        String username = data.get("username");
+        String password = data.get("password");
+        String resourceDetails="AuthAdmin";
+        APIResources resourcesAPI=APIResources.valueOf(resourceDetails);
+        AdminAuthAPI.postAuthAdmin(resourcesAPI.getResources(),username,password);
+    }
+
+    @Then("the login should fail")
+    public void theLoginShouldFail() throws IOException {
+        int statusCode= ConfigReader.getIntProperty("UnauthorizedStatusCode");
+        AdminAuthAPI.checkStatusCode(String.valueOf(statusCode));
+    }
+
+    @And("the admin should see an error message saying the credentials are invalid")
+    public void theAdminShouldSeeAnErrorMessageSayingTheCredentialsAreInvalid() {
+        AdminAuthAPI.checkErrorMessage_ForUnUnauthorizedUser();
+
+    }
 }

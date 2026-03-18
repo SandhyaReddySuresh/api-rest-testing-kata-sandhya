@@ -1,0 +1,69 @@
+Request method:	POST
+Request URI:	https://automationintesting.online/api/auth/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "username": "admin",
+    "password": "password"
+}
+HTTP/1.1 200 OK
+Date: Wed, 18 Mar 2026 11:50:47 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Server: cloudflare
+vary: rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch
+x-railway-edge: railway/europe-west4-drams3a
+x-railway-request-id: a2YAr6B5QpSmKzgLrJsmnA
+cf-cache-status: DYNAMIC
+Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=XQYl1HxX%2F%2BMAfXUqusDGY8WM7woVd4vybFwpfpzk3hDauNcAewXmjDcHhICFZb3YuGZglBEDmNRz%2Fq1Kzo24X8IXEtgM5ysQsRcotjf8Nm0ypX19Z1yRjVSp"}]}
+Content-Encoding: gzip
+CF-RAY: 9de405928f92d482-CDG
+alt-svc: h3=":443"; ma=86400
+
+{
+    "token": "UpruRcaW8PpDNIrk"
+}
+Request method:	POST
+Request URI:	https://automationintesting.online/api/auth/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "username": "admin1",
+    "password": "password1"
+}
+HTTP/1.1 401 Unauthorized
+Date: Wed, 18 Mar 2026 11:50:48 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Server: cloudflare
+vary: rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch
+x-railway-edge: railway/europe-west4-drams3a
+x-railway-request-id: u7wSBFP3QDSXo18om3z_FQ
+cf-cache-status: DYNAMIC
+Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=Xt1X5qmFS77jhrrh19WOE3SfnXTcwcLuxnZ0Bx%2FuSEjLuS2R%2BDNhRC8JMqMLHZAKm0YKQylgXbTCDQcPnvcJJJRJwoWLADcJiN4YETRJkMg90kwVPvRMYJUv"}]}
+CF-RAY: 9de40597cc119e60-CDG
+alt-svc: h3=":443"; ma=86400
+
+{
+    "error": "Invalid credentials"
+}
