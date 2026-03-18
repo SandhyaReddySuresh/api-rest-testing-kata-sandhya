@@ -23,3 +23,9 @@ Feature: Room Booking Summary
       | roomid |
       | 1      |
       | 2      |
+
+  Scenario: Unauthorized user cannot retrieve booking details
+    Given the user is not authenticated
+    When the user requests the booking summary for room ID 1
+    Then the system denies access
+    And an authentication error message "Authentication required" is displayed

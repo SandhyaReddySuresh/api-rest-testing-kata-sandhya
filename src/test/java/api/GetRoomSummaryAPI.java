@@ -59,4 +59,25 @@ public class GetRoomSummaryAPI extends Utils {
 
         }
     }
-}
+
+    public static Response getRoomSummary_UnauthorizedUsers(String resourceDetails, int roomID,String tokenValue) throws IOException {
+        requestSpec = given()
+                .queryParam("roomid", roomID)
+                .spec(requestSpecification())
+                .log().all();
+
+        response = requestSpec
+                .when()
+                .get(resourceDetails)
+                .then()
+                .spec(responseSpecification())
+                .log().all()
+                .extract().response();
+        return response;
+    }
+
+    public static void checkErrorMessage(String expectedMessage)
+    {
+        Utils.checkErrorMessage(response,expectedMessage);
+    }
+    }
