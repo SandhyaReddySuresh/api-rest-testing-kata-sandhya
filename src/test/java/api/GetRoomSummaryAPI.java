@@ -113,4 +113,10 @@ public class GetRoomSummaryAPI extends Utils {
         Utils.checkInvalidStatusCode(response);
     }
 
+    public static void checkSchemaValidation(String schemaJson)
+    {
+        Utils.checkSchemaValidation(response,schemaJson);
     }
+
+
+}

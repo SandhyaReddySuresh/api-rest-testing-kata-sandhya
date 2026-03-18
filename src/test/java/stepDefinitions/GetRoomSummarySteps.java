@@ -79,4 +79,9 @@ public class GetRoomSummarySteps {
         GetRoomSummaryAPI.checkErrorMessage(errorMessage);
 
     }
+
+    @And("the response body should match the expected Room summary JSON schema {string}")
+    public void theResponseBodyShouldMatchTheExpectedRoomSummaryJSONSchema(String schemaJson) {
+        GetRoomSummaryAPI.checkSchemaValidation(schemaJson);
+    }
 }

@@ -9,6 +9,7 @@ import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
+import org.junit.Assert;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -97,5 +98,16 @@ public class Utils {
         }
 
         assertThat("Error message mismatch", actualMessage, equalTo(expectedMessage));
+    }
+    public static void checkSchemaValidation(Response response,String schemaJson)
+    {
+        try {
+            validateJsonSchema(response, "schema/" + schemaJson);
+        }
+        catch (AssertionError e)
+        {
+            Assert.fail("Schema validation correctly failed: " + e.getMessage());
+
+        }
     }
 }

@@ -18,6 +18,7 @@ Feature: Room Booking Summary
     When the user asks the room booking summary for roomId <roomid>
     Then the room booking summary response should be successful
     And the response should contain a list of bookings
+    And the response body should match the expected Room summary JSON schema "getRoomSummary-schema.json"
 
     Examples:
       | roomid |
