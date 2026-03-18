@@ -21,7 +21,7 @@ public class ListOfRoomsAPI extends Utils {
 
     public static Response response;
     public static ListRoomDetails roomListDetails;
-
+    public static int roomId;
 
     public static Response getListOfRooms(String resourceDetails) throws IOException {
 
@@ -45,7 +45,7 @@ public class ListOfRoomsAPI extends Utils {
     {
         System.out.println(response.toString());
         String statusCodeResponse= String.valueOf(response.statusCode());
-        Assert.assertEquals("Success status reponse",statusCodeResponse,statusCode);
+        Assert.assertEquals("Success status response",statusCodeResponse,statusCode);
 
     }
 
@@ -65,6 +65,7 @@ public class ListOfRoomsAPI extends Utils {
                 switch (field) {
                     case "roomid":
                         Assert.assertNotNull("roomid is missing", room.getRoomid());
+                        roomId=room.getRoomid();
                         break;
                     case "roomName":
                         Assert.assertNotNull("roomName is missing", room.getRoomName());

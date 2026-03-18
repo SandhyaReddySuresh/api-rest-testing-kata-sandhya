@@ -4,6 +4,7 @@ import api.AdminAuthAPI;
 import api.ListOfRoomsAPI;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import utils.APIResources;
@@ -81,6 +82,7 @@ public class ListOfRoomsSteps {
     public void theUserShouldSeeAMessage(String errorMessage) {
         ListOfRoomsAPI.checkErrorMessage(errorMessage);
     }
+
 
 
 }
