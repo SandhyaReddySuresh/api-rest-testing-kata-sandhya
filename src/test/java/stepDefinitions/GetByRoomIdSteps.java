@@ -77,4 +77,6 @@ public class GetByRoomIdSteps {
     public void theResponseBodyShouldMatchTheExpectedJSONSchema() {
         GetByRoomIdAPI.checkSchemaValidation();
     }
+
+
 }
