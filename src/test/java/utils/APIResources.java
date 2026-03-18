@@ -1,7 +1,9 @@
 package utils;
 
 public enum APIResources {
-    AuthAdmin("/api/auth/login");
+    AuthAdmin("/api/auth/login"),
+    ListOfRoomsAPI("/api/room");
+
     private String resourceAPI;
 
     APIResources(String resource) {
