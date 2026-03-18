@@ -1,8 +1,9 @@
 Request method:	GET
-Request URI:	https://automationintesting.online/api/room
+Request URI:	https://automationintesting.online/api/room?checkin=2025-07-17&CheckOut=2025-07-18
 Proxy:			<none>
 Request params:	<none>
-Query params:	<none>
+Query params:	checkin=2025-07-17
+				CheckOut=2025-07-18
 Form params:	<none>
 Path params:	<none>
 Headers:		Accept=*/*
@@ -11,19 +12,19 @@ Cookies:		<none>
 Multiparts:		<none>
 Body:			<none>
 HTTP/1.1 200 OK
-Date: Wed, 18 Mar 2026 14:45:38 GMT
+Date: Wed, 18 Mar 2026 15:38:49 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
 Server: cloudflare
 vary: rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch
 x-railway-edge: railway/europe-west4-drams3a
-x-railway-request-id: cNMLeaHRSLqpvhdt0-QtfA
+x-railway-request-id: V3-Y416ZSqK3c1TF5nX1uw
 cf-cache-status: DYNAMIC
 Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
-Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=rKy%2F1ZAQb9VfV7uGH1H0FEIYnrinN%2FSBx4GvV69VDtIkuk%2Br8SmUwt%2FvYkcgVUqF5H2nYcMv5KXbBga06i8GMvc8YQhujD8LNFJOdMe%2FFgdU0HCzD2J6Wg%3D%3D"}]}
+Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=UPzphgrnvTyrnO3L%2BusF0zkjYuMWsygoLF47jsif%2FK3IcypbW9dLRtA05C9WpnGV0r%2Bbfb8w3MG2r1TRuOqbcW%2B1zmg9w3PJHpYJCyC%2BFkrjkh9EBgN7napH"}]}
 Content-Encoding: gzip
-CF-RAY: 9de505b35ed199e8-CDG
+CF-RAY: 9de55396bb6a6f02-CDG
 alt-svc: h3=":443"; ma=86400
 
 {
@@ -73,10 +74,11 @@ alt-svc: h3=":443"; ma=86400
     ]
 }
 Request method:	GET
-Request URI:	https://automationintesting.online/api/room
+Request URI:	https://automationintesting.online/api/room?checkin=5666666&CheckOut=77777777
 Proxy:			<none>
 Request params:	<none>
-Query params:	<none>
+Query params:	checkin=5666666
+				CheckOut=77777777
 Form params:	<none>
 Path params:	<none>
 Headers:		Accept=*/*
@@ -85,19 +87,19 @@ Cookies:		<none>
 Multiparts:		<none>
 Body:			<none>
 HTTP/1.1 200 OK
-Date: Wed, 18 Mar 2026 14:45:39 GMT
+Date: Wed, 18 Mar 2026 15:38:49 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
 Server: cloudflare
 vary: rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch
 x-railway-edge: railway/europe-west4-drams3a
-x-railway-request-id: bIiZ9i26SX6yslSRjUJq2g
+x-railway-request-id: puF0eeJPQCaw-Wjsw9P4nw
 cf-cache-status: DYNAMIC
 Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
-Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=p3lW2BlHnaQMA2wh50Ccr%2BYqNtjQoHycDojWTmnprO%2BpKOh0X6bZylBDe0Bjw%2B6zjK1kKHkRT%2BE3LnMhJ6ttWDigvS1GpNGBVvGnm81hu1dpZYv9w2Tl9nwv"}]}
+Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=B2lVYTy%2FkUJxrXBD1QMEZXzrAwhjT50%2FCgTgWXWoNhpKdoFYvDqTPm0zXTP3uVGM%2Bma71J7yRt7%2F0491LfMxfkWJeTjkvPBtGKRiqterTImBIlblf5HMRVYQ"}]}
 Content-Encoding: gzip
-CF-RAY: 9de505b8faf52282-CDG
+CF-RAY: 9de5539d7986f82e-CDG
 alt-svc: h3=":443"; ma=86400
 
 {
@@ -147,10 +149,11 @@ alt-svc: h3=":443"; ma=86400
     ]
 }
 Request method:	GET
-Request URI:	https://automationintesting.online/api/rooms
+Request URI:	https://automationintesting.online/api/room?checkin=17-07-2025&CheckOut=18-07-2025
 Proxy:			<none>
 Request params:	<none>
-Query params:	<none>
+Query params:	checkin=17-07-2025
+				CheckOut=18-07-2025
 Form params:	<none>
 Path params:	<none>
 Headers:		Accept=*/*
@@ -158,116 +161,74 @@ Headers:		Accept=*/*
 Cookies:		<none>
 Multiparts:		<none>
 Body:			<none>
-HTTP/1.1 404 Not Found
-Date: Wed, 18 Mar 2026 14:45:40 GMT
-Content-Type: text/html; charset=utf-8
-Transfer-Encoding: chunked
-Connection: keep-alive
-Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate
-Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=TWYHwBmCG9W02my768AQEUiauPS2hNzjZhP2F9BWEHWlzV0Dqp5ozFKvhBajufkrfrGF9zqYqleAxCi1IFZh11MeY2ZsEFUmqlkEvMf59rE5nBk2XXTBafaM"}]}
-Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
-Server: cloudflare
-vary: rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, Accept-Encoding
-x-nextjs-cache: HIT
-x-nextjs-prerender: 1
-x-nextjs-prerender: 1
-x-nextjs-stale-time: 300
-x-powered-by: Next.js
-x-railway-edge: railway/europe-west4-drams3a
-x-railway-request-id: _kXIp324Q12lzHBJ21mRUA
-cf-cache-status: DYNAMIC
-Content-Encoding: gzip
-CF-RAY: 9de505bc8f146eff-CDG
-alt-svc: h3=":443"; ma=86400
-
-<html id="root" lang="en">
-  <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <link rel="stylesheet" href="/_next/static/chunks/1518a2a431ab38f4.css" data-precedence="next"/>
-    <link rel="preload" as="script" fetchpriority="low" href="/_next/static/chunks/61a4c3c2ee9303e8.js"/>
-    <script src="/_next/static/chunks/7ce1ed7507b2cf5e.js" async=""/>
-    <script src="/_next/static/chunks/7d72be335d89f326.js" async=""/>
-    <script src="/_next/static/chunks/f7b9a15115349e63.js" async=""/>
-    <script src="/_next/static/chunks/turbopack-cf20ebdd80a8a033.js" async=""/>
-    <script src="/_next/static/chunks/d753f357e984bf86.js" async=""/>
-    <script src="/_next/static/chunks/167df64cda48d4ef.js" async=""/>
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" as="style"/>
-    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" as="style" crossorigin="anonymous" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"/>
-    <link rel="preload" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" as="style"/>
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" as="script" crossorigin="" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"/>
-    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" as="script" crossorigin="" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"/>
-    <meta name="robots" content="noindex"/>
-    <meta name="google" content="notranslate"/>
-    <meta http-equiv="Content-Language" content="en"/>
-    <title>404: This page could not be found.</title>
-    <title>Restful-booker-platform demo</title>
-    <meta name="description" content="A platform for testing restful web services"/>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" rel="stylesheet"/>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous"/>
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
-    <script src="/_next/static/chunks/a6dad97d9634a72d.js" nomodule=""/>
-  </head>
-  <body>
-    <div hidden=""/>
-    <div id="root-container">
-      <div style="font-family:system-ui,&quot;Segoe UI&quot;,Roboto,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;;height:100vh;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center">
-        <div>
-          <style>body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}</style>
-          <h1 class="next-error-h1" style="display:inline-block;margin:0 20px 0 0;padding:0 23px 0 0;font-size:24px;font-weight:500;vertical-align:top;line-height:49px">404</h1>
-          <div style="display:inline-block">
-            <h2 style="font-size:14px;font-weight:400;line-height:49px;margin:0">This page could not be found.</h2>
-          </div>
-        </div>
-      </div>
-    </div>
-    <script id="_R_" src="/_next/static/chunks/61a4c3c2ee9303e8.js" async=""/>
-    <script>(self.__next_f=self.__next_f||[]).push([0])</script>
-    <script>self.__next_f.push([1,"1:\"$Sreact.fragment\"\n2:I[39756,[\"/_next/static/chunks/d753f357e984bf86.js\",\"/_next/static/chunks/167df64cda48d4ef.js\"],\"default\"]\n3:I[37457,[\"/_next/static/chunks/d753f357e984bf86.js\",\"/_next/static/chunks/167df64cda48d4ef.js\"],\"default\"]\n4:I[79520,[\"/_next/static/chunks/d753f357e984bf86.js\",\"/_next/static/chunks/167df64cda48d4ef.js\"],\"\"]\n5:I[97367,[\"/_next/static/chunks/d753f357e984bf86.js\",\"/_next/static/chunks/167df64cda48d4ef.js\"],\"OutletBoundary\"]\n6:\"$Sreact.suspense\"\n8:I[97367,[\"/_next/static/chunks/d753f357e984bf86.js\",\"/_next/static/chunks/167df64cda48d4ef.js\"],\"ViewportBoundary\"]\na:I[97367,[\"/_next/static/chunks/d753f357e984bf86.js\",\"/_next/static/chunks/167df64cda48d4ef.js\"],\"MetadataBoundary\"]\nc:I[68027,[\"/_next/static/chunks/d753f357e984bf86.js\",\"/_next/static/chunks/167df64cda48d4ef.js\"],\"default\"]\n:HL[\"/_next/static/chunks/1518a2a431ab38f4.css\",\"style\"]\n:HL[\"https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css\",\"style\"]\n:HL[\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css\",\"style\",{\"crossOrigin\":\"anonymous\",\"integrity\":\"sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7\"}]\n:HL[\"https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css\",\"style\"]\n"])</script>
-    <script>self.__next_f.push([1,"0:{\"P\":null,\"b\":\"ZJsDS1lBiHx-ODGmxn6Ez\",\"c\":[\"\",\"_not-found\"],\"q\":\"\",\"i\":false,\"f\":[[[\"\",{\"children\":[\"/_not-found\",{\"children\":[\"__PAGE__\",{}]}]},\"$undefined\",\"$undefined\",true],[[\"$\",\"$1\",\"c\",{\"children\":[[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/chunks/1518a2a431ab38f4.css\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\",\"nonce\":\"$undefined\"}],[\"$\",\"script\",\"script-0\",{\"src\":\"/_next/static/chunks/d753f357e984bf86.js\",\"async\":true,\"nonce\":\"$undefined\"}],[\"$\",\"script\",\"script-1\",{\"src\":\"/_next/static/chunks/167df64cda48d4ef.js\",\"async\":true,\"nonce\":\"$undefined\"}]],[\"$\",\"html\",null,{\"lang\":\"en\",\"id\":\"root\",\"children\":[[\"$\",\"head\",null,{\"children\":[[\"$\",\"meta\",null,{\"name\":\"google\",\"content\":\"notranslate\"}],[\"$\",\"meta\",null,{\"httpEquiv\":\"Content-Language\",\"content\":\"en\"}],[\"$\",\"link\",null,{\"href\":\"https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css\",\"rel\":\"stylesheet\"}],[\"$\",\"link\",null,{\"href\":\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css\",\"rel\":\"stylesheet\",\"integrity\":\"sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7\",\"crossOrigin\":\"anonymous\"}],[\"$\",\"link\",null,{\"href\":\"https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css\",\"rel\":\"stylesheet\"}]]}],[\"$\",\"body\",null,{\"children\":[[\"$\",\"div\",null,{\"id\":\"root-container\",\"children\":[\"$\",\"$L2\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L3\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":[[[\"$\",\"title\",null,{\"children\":\"404: This page could not be found.\"}],[\"$\",\"div\",null,{\"style\":{\"fontFamily\":\"system-ui,\\\"Segoe UI\\\",Roboto,Helvetica,Arial,sans-serif,\\\"Apple Color Emoji\\\",\\\"Segoe UI Emoji\\\"\",\"height\":\"100vh\",\"textAlign\":\"center\",\"display\":\"flex\",\"flexDirection\":\"column\",\"alignItems\":\"center\",\"justifyContent\":\"center\"},\"children\":[\"$\",\"div\",null,{\"children\":[[\"$\",\"style\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}\"}}],[\"$\",\"h1\",null,{\"className\":\"next-error-h1\",\"style\":{\"display\":\"inline-block\",\"margin\":\"0 20px 0 0\",\"padding\":\"0 23px 0 0\",\"fontSize\":24,\"fontWeight\":500,\"verticalAlign\":\"top\",\"lineHeight\":\"49px\"},\"children\":404}],[\"$\",\"div\",null,{\"style\":{\"display\":\"inline-block\"},\"children\":[\"$\",\"h2\",null,{\"style\":{\"fontSize\":14,\"fontWeight\":400,\"lineHeight\":\"49px\",\"margin\":0},\"children\":\"This page could not be found.\"}]}]]}]}]],[]],\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]}],[\"$\",\"$L4\",null,{\"src\":\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js\",\"integrity\":\"sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut\",\"crossOrigin\":\"anonymous\",\"strategy\":\"afterInteractive\"}],[\"$\",\"$L4\",null,{\"src\":\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js\",\"integrity\":\"sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq\",\"crossOrigin\":\"anonymous\",\"strategy\":\"afterInteractive\"}]]}]]}]]}],{\"children\":[[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$L2\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L3\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}],{\"children\":[[\"$\",\"$1\",\"c\",{\"children\":[[[\"$\",\"title\",null,{\"children\":\"404: This page could not be found.\"}],[\"$\",\"div\",null,{\"style\":\"$0:f:0:1:0:props:children:1:props:children:1:props:children:0:props:children:props:notFound:0:1:props:style\",\"children\":[\"$\",\"div\",null,{\"children\":[[\"$\",\"style\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}\"}}],[\"$\",\"h1\",null,{\"className\":\"next-error-h1\",\"style\":\"$0:f:0:1:0:props:children:1:props:children:1:props:children:0:props:children:props:notFound:0:1:props:children:props:children:1:props:style\",\"children\":404}],[\"$\",\"div\",null,{\"style\":\"$0:f:0:1:0:props:children:1:props:children:1:props:children:0:props:children:props:notFound:0:1:props:children:props:children:2:props:style\",\"children\":[\"$\",\"h2\",null,{\"style\":\"$0:f:0:1:0:props:children:1:props:children:1:props:children:0:props:children:props:notFound:0:1:props:children:props:children:2:props:children:props:style\",\"children\":\"This page could not be found.\"}]}]]}]}]],null,[\"$\",\"$L5\",null,{\"children\":[\"$\",\"$6\",null,{\"name\":\"Next.MetadataOutlet\",\"children\":\"$@7\"}]}]]}],{},null,false,false]},null,false,false]},null,false,false],[\"$\",\"$1\",\"h\",{\"children\":[[\"$\",\"meta\",null,{\"name\":\"robots\",\"content\":\"noindex\"}],[\"$\",\"$L8\",null,{\"children\":\"$@9\"}],[\"$\",\"div\",null,{\"hidden\":true,\"children\":[\"$\",\"$La\",null,{\"children\":[\"$\",\"$6\",null,{\"name\":\"Next.Metadata\",\"children\":\"$@b\"}]}]}],null]}],false]],\"m\":\"$undefined\",\"G\":[\"$c\",\"$undefined\"],\"S\":true}\n"])</script>
-    <script>self.__next_f.push([1,"9:[[\"$\",\"meta\",\"0\",{\"charSet\":\"utf-8\"}],[\"$\",\"meta\",\"1\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"}]]\n"])</script>
-    <script>self.__next_f.push([1,"b:[[\"$\",\"title\",\"0\",{\"children\":\"Restful-booker-platform demo\"}],[\"$\",\"meta\",\"1\",{\"name\":\"description\",\"content\":\"A platform for testing restful web services\"}]]\n7:null\n"])</script>
-  </body>
-</html>
-Request method:	GET
-Request URI:	https://automationintesting.online/api/room/abc
-Proxy:			<none>
-Request params:	<none>
-Query params:	<none>
-Form params:	<none>
-Path params:	<none>
-Headers:		Accept=*/*
-				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:			<none>
-HTTP/1.1 404 Not Found
-Date: Wed, 18 Mar 2026 14:45:40 GMT
+HTTP/1.1 200 OK
+Date: Wed, 18 Mar 2026 15:38:50 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
 Server: cloudflare
 vary: rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch
 x-railway-edge: railway/europe-west4-drams3a
-x-railway-request-id: My_Tt0RNQqWQAeqiYqdHTg
+x-railway-request-id: HrWw9JH1T6ezw4m321mRUA
 cf-cache-status: DYNAMIC
 Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
-Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=kXHeRmcKwb%2F3yEMVQJL7Yo6zcwqJzpUlgvr1ZMtijn%2B0tCXt46cwlnjIOd%2Berz8ULtTQhSAuKcR55xcmsSL2m8B22cg11qjy3QXhJi8vXMT%2BR60Spn9%2FNZW9"}]}
+Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=AQrN%2B%2Fw%2FPG9%2FWoq5GDA2anjNS0qK4A%2B0FJTCN8elf3PrEHQaNIBH0yydyHU%2FuQfeVtoWeARpAuZgv2KZidrs5LycqntaDKuP0a08hKqS8hckfCWMAha0c%2FNo"}]}
 Content-Encoding: gzip
-CF-RAY: 9de505bfec570340-CDG
+CF-RAY: 9de553a0ae1097b6-CDG
 alt-svc: h3=":443"; ma=86400
 
 {
-    "timestamp": "2026-03-18T14:45:40.529+00:00",
-    "status": 404,
-    "error": "Not Found",
-    "path": "/room/abc"
+    "rooms": [
+        {
+            "roomid": 1,
+            "roomName": "101",
+            "type": "Single",
+            "accessible": true,
+            "image": "/images/room1.jpg",
+            "description": "Aenean porttitor mauris sit amet lacinia molestie. In posuere accumsan aliquet. Maecenas sit amet nisl massa. Interdum et malesuada fames ac ante.",
+            "features": [
+                "TV",
+                "WiFi",
+                "Safe"
+            ],
+            "roomPrice": 100
+        },
+        {
+            "roomid": 2,
+            "roomName": "102",
+            "type": "Double",
+            "accessible": true,
+            "image": "/images/room2.jpg",
+            "description": "Vestibulum sollicitudin, lectus ac mollis consequat, lorem orci ultrices tellus, eleifend euismod tortor dui egestas erat. Phasellus et ipsum nisl. ",
+            "features": [
+                "TV",
+                "Radio",
+                "Safe"
+            ],
+            "roomPrice": 150
+        },
+        {
+            "roomid": 3,
+            "roomName": "103",
+            "type": "Suite",
+            "accessible": true,
+            "image": "/images/room3.jpg",
+            "description": "Etiam metus metus, fringilla ac sagittis id, consequat vel neque. Nunc commodo quis nisl nec posuere. Etiam at accumsan ex. ",
+            "features": [
+                "Radio",
+                "WiFi",
+                "Safe"
+            ],
+            "roomPrice": 225
+        }
+    ]
 }
-Request method:	POST
-Request URI:	https://automationintesting.online/api/room
+Request method:	GET
+Request URI:	https://automationintesting.online/api/room?checkin=2000-01-01&CheckOut=2000-01-02
 Proxy:			<none>
 Request params:	<none>
-Query params:	<none>
+Query params:	checkin=2000-01-01
+				CheckOut=2000-01-02
 Form params:	<none>
 Path params:	<none>
 Headers:		Accept=*/*
@@ -275,23 +236,140 @@ Headers:		Accept=*/*
 Cookies:		<none>
 Multiparts:		<none>
 Body:			<none>
-HTTP/1.1 500 Internal Server Error
-Date: Wed, 18 Mar 2026 14:45:40 GMT
+HTTP/1.1 200 OK
+Date: Wed, 18 Mar 2026 15:38:50 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
 Server: cloudflare
 vary: rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch
 x-railway-edge: railway/europe-west4-drams3a
-x-railway-request-id: WxOtPyj3TyeycSYhw9P4nw
+x-railway-request-id: JBm3mBU2RoyuLBuUw9P4nw
 cf-cache-status: DYNAMIC
 Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
-Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=WbtAsUKThJPVsUOsBGXZhFbl5NHEV6yuf4G7OAcotz6C6NSkLWR7hG0HaDcIJ%2BR%2By4O4dDaF2ouoo%2BggsGIEkQqjekddLsuM22OvxS7dptP%2FlcCUafMnONQJ"}]}
-CF-RAY: 9de505c19b94ebac-CDG
+Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=BjKQaad0L1H5IRYm0IGpDPsvCEAZmdT25HZTH9mafqefAOxE1wR%2BJsg12ucU2ls3tOOep764laaD2CFrfCdF8Zu1NSi3XxrtrYyCbK%2FTJ6dOxnNoAHZLPWlp"}]}
+Content-Encoding: gzip
+CF-RAY: 9de553a28a689d48-CDG
 alt-svc: h3=":443"; ma=86400
 
 {
-    "errors": [
-        "An unexpected error occurred"
+    "rooms": [
+        {
+            "roomid": 1,
+            "roomName": "101",
+            "type": "Single",
+            "accessible": true,
+            "image": "/images/room1.jpg",
+            "description": "Aenean porttitor mauris sit amet lacinia molestie. In posuere accumsan aliquet. Maecenas sit amet nisl massa. Interdum et malesuada fames ac ante.",
+            "features": [
+                "TV",
+                "WiFi",
+                "Safe"
+            ],
+            "roomPrice": 100
+        },
+        {
+            "roomid": 2,
+            "roomName": "102",
+            "type": "Double",
+            "accessible": true,
+            "image": "/images/room2.jpg",
+            "description": "Vestibulum sollicitudin, lectus ac mollis consequat, lorem orci ultrices tellus, eleifend euismod tortor dui egestas erat. Phasellus et ipsum nisl. ",
+            "features": [
+                "TV",
+                "Radio",
+                "Safe"
+            ],
+            "roomPrice": 150
+        },
+        {
+            "roomid": 3,
+            "roomName": "103",
+            "type": "Suite",
+            "accessible": true,
+            "image": "/images/room3.jpg",
+            "description": "Etiam metus metus, fringilla ac sagittis id, consequat vel neque. Nunc commodo quis nisl nec posuere. Etiam at accumsan ex. ",
+            "features": [
+                "Radio",
+                "WiFi",
+                "Safe"
+            ],
+            "roomPrice": 225
+        }
+    ]
+}
+Request method:	GET
+Request URI:	https://automationintesting.online/api/room?checkin=2025-07-18&CheckOut=2025-07-17
+Proxy:			<none>
+Request params:	<none>
+Query params:	checkin=2025-07-18
+				CheckOut=2025-07-17
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Date: Wed, 18 Mar 2026 15:38:50 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Server: cloudflare
+vary: rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch
+x-railway-edge: railway/europe-west4-drams3a
+x-railway-request-id: sqGkIJgGS_uiSDn_21mRUA
+cf-cache-status: DYNAMIC
+Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=lUqih5gu8GZFJ7606%2Fi%2BTQ6fYPtlssJShC8AXEhiMxnLznO%2FP5huvbE0cLItnE7oCM8wXliejiqr%2BcNVjQm9iBzllvNbmpUDJadExyQnCi39QWTSm4ppseAj"}]}
+Content-Encoding: gzip
+CF-RAY: 9de553a3eaf17879-CDG
+alt-svc: h3=":443"; ma=86400
+
+{
+    "rooms": [
+        {
+            "roomid": 1,
+            "roomName": "101",
+            "type": "Single",
+            "accessible": true,
+            "image": "/images/room1.jpg",
+            "description": "Aenean porttitor mauris sit amet lacinia molestie. In posuere accumsan aliquet. Maecenas sit amet nisl massa. Interdum et malesuada fames ac ante.",
+            "features": [
+                "TV",
+                "WiFi",
+                "Safe"
+            ],
+            "roomPrice": 100
+        },
+        {
+            "roomid": 2,
+            "roomName": "102",
+            "type": "Double",
+            "accessible": true,
+            "image": "/images/room2.jpg",
+            "description": "Vestibulum sollicitudin, lectus ac mollis consequat, lorem orci ultrices tellus, eleifend euismod tortor dui egestas erat. Phasellus et ipsum nisl. ",
+            "features": [
+                "TV",
+                "Radio",
+                "Safe"
+            ],
+            "roomPrice": 150
+        },
+        {
+            "roomid": 3,
+            "roomName": "103",
+            "type": "Suite",
+            "accessible": true,
+            "image": "/images/room3.jpg",
+            "description": "Etiam metus metus, fringilla ac sagittis id, consequat vel neque. Nunc commodo quis nisl nec posuere. Etiam at accumsan ex. ",
+            "features": [
+                "Radio",
+                "WiFi",
+                "Safe"
+            ],
+            "roomPrice": 225
+        }
     ]
 }

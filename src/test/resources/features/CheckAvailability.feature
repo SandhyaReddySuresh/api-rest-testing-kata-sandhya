@@ -11,8 +11,8 @@ Feature: Room Availability API
   Scenario: Successfully retrieve available rooms for valid date range
     When I request rooms with check-in "2025-07-17" and check-out "2025-07-18"
     Then the response status should be 200
-    And the response should contain a list of rooms
-    And each room should have the following fields:
+    And the response should contain a list of available rooms
+    And each room in the list should have the following fields:
       | roomid      |
       | roomName    |
       | type        |
@@ -21,3 +21,25 @@ Feature: Room Availability API
       | description |
       | features    |
       | roomPrice   |
+
+  # Negative scenarios
+  Scenario: Request rooms with invalid numeric dates
+    When I request rooms with check-in "5666666" and check-out "77777777"
+    Then the response status should be 400
+    And the response should contain an error message indicating "Invalid date format"
+
+  Scenario: Request rooms with invalid date format
+    When I request rooms with check-in "17-07-2025" and check-out "18-07-2025"
+    Then the response status should be 400
+    And the response should contain an error message indicating "Invalid date format"
+
+  Scenario: Request rooms for a date in the past
+    When I request rooms with check-in "2000-01-01" and check-out "2000-01-02"
+    Then the response status should be 404
+    And the response should contain an error message indicating "No rooms available for the selected dates"
+
+  Scenario: Request rooms with check-out date before check-in date
+    When I request rooms with check-in "2025-07-18" and check-out "2025-07-17"
+    Then the response status should be 400
+    And the response should contain an error message indicating "Check-out date must be after check-in date"
+

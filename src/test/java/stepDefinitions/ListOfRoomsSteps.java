@@ -81,4 +81,6 @@ public class ListOfRoomsSteps {
     public void theUserShouldSeeAMessage(String errorMessage) {
         ListOfRoomsAPI.checkErrorMessage(errorMessage);
     }
+
+
 }
