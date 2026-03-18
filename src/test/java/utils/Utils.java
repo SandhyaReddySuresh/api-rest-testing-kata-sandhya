@@ -16,6 +16,8 @@ import java.io.IOException;
 import java.io.PrintStream;
 import java.util.Properties;
 
+import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
+
 public class Utils {
 
     public static RequestSpecification req;
@@ -68,5 +70,10 @@ public class Utils {
         String resp=response.asString();
         JsonPath js = new JsonPath(resp);
         return js.get(key).toString();
+    }
+    public static void validateJsonSchema(Response response,String schemaPath) {
+        response.then()
+                .assertThat()
+                .body(matchesJsonSchemaInClasspath(schemaPath));
     }
 }
