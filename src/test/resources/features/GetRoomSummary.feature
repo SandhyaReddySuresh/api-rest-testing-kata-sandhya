@@ -15,9 +15,9 @@ Feature: Room Booking Summary
 
  @GetRoomSummary
   Scenario Outline: Get the room booking summary
-    Given the user wants to check the room booking summary
-    When the user asks the room booking summary for roomId "<roomid>"
+    When the user asks the room booking summary for roomId <roomid>
     Then the room booking summary response should be successful
+    And the response should contain a list of bookings
 
     Examples:
       | roomid |
