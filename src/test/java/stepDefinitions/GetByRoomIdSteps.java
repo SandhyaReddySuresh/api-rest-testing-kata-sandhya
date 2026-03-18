@@ -72,4 +72,9 @@ public class GetByRoomIdSteps {
     public void the_error_message_should_be(String expectedMessage) {
         GetByRoomIdAPI.checkErrorMessage(expectedMessage);
     }
+
+    @And("the response body should match the expected JSON schema")
+    public void theResponseBodyShouldMatchTheExpectedJSONSchema() {
+        GetByRoomIdAPI.checkSchemaValidation();
+    }
 }

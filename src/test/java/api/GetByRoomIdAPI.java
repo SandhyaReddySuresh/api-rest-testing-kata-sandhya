@@ -177,6 +177,17 @@ public class GetByRoomIdAPI extends Utils {
         return response;
 
     }
+    public static void checkSchemaValidation()
+    {
+        try {
+            validateJsonSchema(response, "schema/getByRoomId-schema.json");
+        }
+        catch (AssertionError e)
+        {
+            Assert.fail("Schema validation correctly failed: " + e.getMessage());
+
+        }
+    }
     }
 
 

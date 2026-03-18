@@ -36,6 +36,8 @@ Feature: View Room Details
       | Safe  |
     And the room should have a description explaining it
     And the room should have an image to view
+    And the response body should match the expected JSON schema
+
 
 #    Negative scenario
   Scenario Outline: User tries to fetch room details with invalid inputs
