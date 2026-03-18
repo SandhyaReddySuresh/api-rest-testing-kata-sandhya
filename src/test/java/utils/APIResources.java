@@ -3,7 +3,8 @@ package utils;
 public enum APIResources {
     AuthAdmin("/api/auth/login"),
     ListOfRoomsAPI("/api/room"),
-    InvalidResourceListOfRoomsAPI("/api/rooms");
+    InvalidResourceListOfRoomsAPI("/api/rooms"),
+    InvalidIdentifierListOfRoomsAPI("/api/room/abc");
 
     private String resourceAPI;
 

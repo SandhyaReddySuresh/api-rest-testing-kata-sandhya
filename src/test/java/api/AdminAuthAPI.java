@@ -53,7 +53,7 @@ public class AdminAuthAPI extends Utils {
     public static void checkErrorMessage_ForUnUnauthorizedUser()
     {
         String errorMessage=getJsonPath(response,"error");
-        Assert.assertNotNull("Failed to create booking",errorMessage);
+        Assert.assertNotNull("Failed to authenticate",errorMessage);
     }
 
       public static void checkSchemaValidation()

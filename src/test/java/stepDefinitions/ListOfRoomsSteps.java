@@ -55,4 +55,30 @@ public class ListOfRoomsSteps {
         int statusCode= ConfigReader.getIntProperty("NotFound");
         ListOfRoomsAPI.checkStatusCode(String.valueOf(statusCode));
     }
+
+    @When("the user requests data using an invalid identifier")
+    public void theUserRequestsDataUsingAnInvalidIdentifier() throws IOException {
+        String resourceDetails="InvalidIdentifierListOfRoomsAPI";
+        APIResources resourcesAPI=APIResources.valueOf(resourceDetails);
+        ListOfRoomsAPI.getListOfRooms_Invalid(resourcesAPI.getResources());
+    }
+
+    @When("the user sends a request using an unsupported HTTP method")
+    public void theUserSendsARequestUsingAnUnsupportedHTTPMethod() throws IOException {
+        String resourceDetails="ListOfRoomsAPI";
+        APIResources resourcesAPI=APIResources.valueOf(resourceDetails);
+        ListOfRoomsAPI.getListOfRooms_WithPOSTMethodCall(resourcesAPI.getResources());
+
+    }
+
+    @Then("the system should return status code {int}")
+    public void theSystemShouldReturnStatusCode(int statusCode) throws IOException {
+        ListOfRoomsAPI.checkStatusCode(String.valueOf(statusCode));
+
+    }
+
+    @And("the user should see a {string} message")
+    public void theUserShouldSeeAMessage(String errorMessage) {
+        ListOfRoomsAPI.checkErrorMessage(errorMessage);
+    }
 }

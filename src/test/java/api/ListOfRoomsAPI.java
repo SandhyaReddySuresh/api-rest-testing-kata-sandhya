@@ -119,5 +119,28 @@ public class ListOfRoomsAPI extends Utils {
         return response;
 
     }
+    public static Response getListOfRooms_WithPOSTMethodCall(String resourceDetails) throws IOException {
+
+
+        requestSpec=given().spec(requestSpecification())
+                .log().all();
+
+        response = requestSpec
+                .when()
+                .post(resourceDetails)
+                .then()
+                .log().all()
+                .extract().response();
+        return response;
+
+    }
+    public static void checkErrorMessage(String ExpectedErrorMessage)
+    {
+        String actualErrorMessage=getJsonPath(response,"error");
+        Assert.assertNotNull("Error Message should be displayed",actualErrorMessage);
+        Assert.assertEquals("Display Method Not Allowed Message",ExpectedErrorMessage,actualErrorMessage);
+    }
+
+
     }
 
