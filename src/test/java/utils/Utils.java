@@ -17,6 +17,11 @@ import java.io.PrintStream;
 import java.util.Properties;
 
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
+import static org.hamcrest.CoreMatchers.allOf;
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.greaterThanOrEqualTo;
+import static org.hamcrest.Matchers.lessThan;
 
 public class Utils {
 
@@ -75,5 +80,22 @@ public class Utils {
         response.then()
                 .assertThat()
                 .body(matchesJsonSchemaInClasspath(schemaPath));
+    }
+    public static void checkInvalidStatusCode(Response response)
+    {
+        assertThat("Status code should be 4xx",
+                response.getStatusCode(), allOf(greaterThanOrEqualTo(400), lessThan(500)));
+    }
+    public static void checkErrorMessage(Response response,String expectedMessage)
+    {
+        String actualMessage;
+
+        if (response.jsonPath().get("errors") != null) {
+            actualMessage = response.jsonPath().getString("errors[0]");
+        } else {
+            actualMessage = response.jsonPath().getString("error");
+        }
+
+        assertThat("Error message mismatch", actualMessage, equalTo(expectedMessage));
     }
 }

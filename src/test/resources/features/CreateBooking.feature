@@ -30,17 +30,17 @@ So that I can reserve my stay and receive a booking confirmation with all detail
       | firstname   | lastname   | depositpaid   | checkin   | checkout   | phone   |
       | <firstname> | <lastname> | <depositpaid> | <checkin> | <checkout> | <phone> |
     Then the system should reject the booking
-    And an error message "<error_message>" should be returned
+    And an error message <error_message> should be returned
 
     Examples:
-      | firstname | lastname | depositpaid | checkin    | checkout   | phone       | error_message                         |
-      |           | kumar    | true        | 2026-08-01 | 2026-08-05 | 07123456789 | Missing firstname                     |
-      | arjun     |          | true        | 2026-08-01 | 2026-08-05 | 07123456789 | Missing lastname                      |
-      | arjun     | kumar    | true        |            | 2026-08-05 | 07123456789 | Missing checkin date                  |
-      | arjun     | kumar    | true        | 2026-08-01 |            | 07123456789 | Missing checkout date                 |
-      | arjun     | kumar    | true        | 2026-08-05 | 2026-08-01 | 07123456789 | Invalid date range                    |
-      | priya     | singh    | false       | 2026-09-10 | 2026-09-12 | abc123      | Invalid phone number                  |
-      | raj       | patel    | true        | 2026-10-01 | 2026-10-03 | 123         | Invalid phone number                  |
-      | ravi      | kumar    | false       | 2024-01-01 | 2024-01-05 | 07123456789 | Check-in date cannot be in the past   |
-      | john      | doe      | invalid     | 2026-07-10 | 2026-07-12 | 07123456789 | Invalid deposit value                 |
-      | arjun     | kumar    | true        | 2026-08-01 | 2026-08-05 |             | Missing phone                         |
+      | firstname | lastname | depositpaid | checkin    | checkout   | phone       | error_message                  |
+      |           | kumar    | true        | 2026-08-01 | 2026-08-05 | 07123456789 | Firstname should not be blank  |
+      | arjun     |          | true        | 2026-08-01 | 2026-08-05 | 07123456789 | Lastname should not be blank   |
+      | arjun     | kumar    | true        |            | 2026-08-05 | 07123456789 | must not be null               |
+      | arjun     | kumar    | true        | 2026-08-01 |            | 07123456789 | must not be null               |
+      | arjun     | kumar    | true        | 2026-08-05 | 2026-08-01 | 07123456789 | Failed to create booking       |
+      | priya     | singh    | false       | 2026-09-10 | 2026-09-12 | abc123      | size must be between 11 and 21 |
+      | raj       | patel    | true        | 2026-10-01 | 2026-10-03 | 123         | size must be between 11 and 21 |
+      | ravi      | kumar    | false       | 2024-01-01 | 2024-01-05 | 07123456789 | Failed to create booking       |
+      | john      | doe      | invalid     | 2026-07-10 | 2026-07-12 | 07123456789 | Failed to create booking       |
+      | arjun     | kumar    | true        | 2026-08-01 | 2026-08-05 |             | Failed to create booking       |

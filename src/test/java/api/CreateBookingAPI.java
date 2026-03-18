@@ -12,6 +12,11 @@ import utils.Utils;
 import java.io.IOException;
 
 import static io.restassured.RestAssured.given;
+import static org.hamcrest.CoreMatchers.allOf;
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.greaterThanOrEqualTo;
+import static org.hamcrest.Matchers.lessThan;
 
 public class CreateBookingAPI extends Utils {
     public static RequestSpecification requestSpec;
@@ -72,5 +77,14 @@ public class CreateBookingAPI extends Utils {
         Assert.assertNotNull("Validate BookingID is returned successfully", bookingID);
 
         return bookingID;
+    }
+
+    public static void checkInvalidStatusCode()
+    {
+        Utils.checkInvalidStatusCode(response);
+    }
+    public static void checkErrorMessage(String expectedMessage)
+    {
+      Utils.checkErrorMessage(response,expectedMessage);
     }
 }

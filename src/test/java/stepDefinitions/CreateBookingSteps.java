@@ -44,4 +44,15 @@ public class CreateBookingSteps {
     public void theBookingInformationShouldBeAccurateAndComplete() {
         CreateBookingAPI.checkBookingDetails();
     }
+
+    @Then("the system should reject the booking")
+    public void theSystemShouldRejectTheBooking() {
+        CreateBookingAPI.checkInvalidStatusCode();
+    }
+
+    @And("an error message {} should be returned")
+    public void anErrorMessageShouldBeReturned(String errorMessage) {
+        CreateBookingAPI.checkErrorMessage(errorMessage);
+
+    }
 }
