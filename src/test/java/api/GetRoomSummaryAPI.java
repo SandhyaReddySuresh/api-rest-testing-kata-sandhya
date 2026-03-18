@@ -12,6 +12,9 @@ import utils.Utils;
 import java.io.IOException;
 
 import static io.restassured.RestAssured.given;
+import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.CoreMatchers.notNullValue;
 
 public class GetRoomSummaryAPI extends Utils {
     public static RequestSpecification requestSpec;
@@ -75,9 +78,39 @@ public class GetRoomSummaryAPI extends Utils {
                 .extract().response();
         return response;
     }
+    public static Response getRoomSummary_EmptyRoomId(String resourceDetails) throws IOException {
+        String tokenValue = AdminAuthAPI.checkTokenDetails();
 
+        requestSpec = given()
+                .header("Cookie", "token=" + tokenValue)
+                .queryParam("roomid","")
+                .spec(requestSpecification())
+                .log().all();
+
+        response = requestSpec
+                .when()
+                .get(resourceDetails)
+                .then()
+                .spec(responseSpecification())
+                .log().all()
+                .extract().response();
+        return response;
+    }
     public static void checkErrorMessage(String expectedMessage)
     {
         Utils.checkErrorMessage(response,expectedMessage);
     }
+    public static void checkResponse_For_InvalidRoomId()
+    {
+        response.then()
+                .assertThat()
+                .body("bookings", notNullValue())
+                .body("bookings.size()", equalTo(0));
+
+    }
+    public static void checkInvalidStatusCode()
+    {
+        Utils.checkInvalidStatusCode(response);
+    }
+
     }

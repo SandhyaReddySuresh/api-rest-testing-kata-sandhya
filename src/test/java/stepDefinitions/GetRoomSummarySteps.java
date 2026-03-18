@@ -13,7 +13,7 @@ import utils.ConfigReader;
 import java.io.IOException;
 
 public class GetRoomSummarySteps {
-    public static String tokenValue;
+    public static String token;
 
     @When("the user asks the room booking summary for roomId {}")
     public void theUserAsksTheRoomBookingSummaryForRoomId(String roomId) throws IOException {
@@ -35,7 +35,7 @@ public class GetRoomSummarySteps {
 
     @Given("the user is not authenticated")
     public void theUserIsNotAuthenticated() {
-         tokenValue = null;
+        token = null;
 
     }
 
@@ -43,7 +43,7 @@ public class GetRoomSummarySteps {
     public void theUserRequestsTheBookingSummaryForRoomID(int roomId) throws IOException {
         String resourceDetails="CreateBookingAPI";
         APIResources resourcesAPI=APIResources.valueOf(resourceDetails);
-        GetRoomSummaryAPI.getRoomSummary_UnauthorizedUsers(resourcesAPI.getResources(),roomId,tokenValue);
+        GetRoomSummaryAPI.getRoomSummary_UnauthorizedUsers(resourcesAPI.getResources(),roomId,token);
     }
 
     @Then("the system denies access")
@@ -57,4 +57,26 @@ public class GetRoomSummarySteps {
         GetRoomSummaryAPI.checkErrorMessage(errorMessage);
     }
 
+    @Then("the system should not show any valid room")
+    public void theSystemShouldNotShowAnyValidRoom() {
+        GetRoomSummaryAPI.checkResponse_For_InvalidRoomId();
+    }
+
+    @When("the user requests the booking summary without providing a room ID")
+    public void theUserRequestsTheBookingSummaryWithoutProvidingARoomID() throws IOException {
+        String resourceDetails="CreateBookingAPI";
+        APIResources resourcesAPI=APIResources.valueOf(resourceDetails);
+        GetRoomSummaryAPI.getRoomSummary_EmptyRoomId(resourcesAPI.getResources());
+    }
+
+    @Then("the system should respond with an error")
+    public void theSystemShouldRespondWithAnError() {
+       GetRoomSummaryAPI.checkInvalidStatusCode();
+    }
+
+    @And("the error message should be {string}  is dispalyed")
+    public void theErrorMessageShouldBeIsDispalyed(String errorMessage) {
+        GetRoomSummaryAPI.checkErrorMessage(errorMessage);
+
+    }
 }

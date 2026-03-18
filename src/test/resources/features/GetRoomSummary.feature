@@ -29,3 +29,15 @@ Feature: Room Booking Summary
     When the user requests the booking summary for room ID 1
     Then the system denies access
     And an authentication error message "Authentication required" is displayed
+
+  Scenario Outline: Retrieve bookings for a room
+    When the user asks the room booking summary for roomId <roomid>
+    Then the system should not show any valid room
+    Examples:
+      | roomid  |
+      | 9999999 |
+
+  Scenario: Booking summary returns error when room ID is missing
+    When the user requests the booking summary without providing a room ID
+    Then the system should respond with an error
+    And the error message should be "Room ID is required"  is dispalyed
