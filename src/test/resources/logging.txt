@@ -15,23 +15,23 @@ Body:
     "password": "password"
 }
 HTTP/1.1 200 OK
-Date: Wed, 18 Mar 2026 11:50:47 GMT
+Date: Wed, 18 Mar 2026 11:59:09 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
 Server: cloudflare
 vary: rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch
 x-railway-edge: railway/europe-west4-drams3a
-x-railway-request-id: a2YAr6B5QpSmKzgLrJsmnA
+x-railway-request-id: ubrFWTSSSzyDGQ0IjUJq2g
 cf-cache-status: DYNAMIC
 Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
-Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=XQYl1HxX%2F%2BMAfXUqusDGY8WM7woVd4vybFwpfpzk3hDauNcAewXmjDcHhICFZb3YuGZglBEDmNRz%2Fq1Kzo24X8IXEtgM5ysQsRcotjf8Nm0ypX19Z1yRjVSp"}]}
+Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=hPJ5YXLm%2F7vqdkgXvnAJL4w9oK28R7YMjSd38nSnVZ6CuOHoa%2FXdYp%2BkSFdxCOdzy8pRVcNw9%2FBYYS1UFBMmN74cC6QXNXBSpjfgNXKVfG418vX70tK7x6aC"}]}
 Content-Encoding: gzip
-CF-RAY: 9de405928f92d482-CDG
+CF-RAY: 9de411d3abf60279-CDG
 alt-svc: h3=":443"; ma=86400
 
 {
-    "token": "UpruRcaW8PpDNIrk"
+    "token": "6do0pPDelER9z4kk"
 }
 Request method:	POST
 Request URI:	https://automationintesting.online/api/auth/login
@@ -46,22 +46,56 @@ Cookies:		<none>
 Multiparts:		<none>
 Body:
 {
-    "username": "admin1",
+    "username": "admin2",
     "password": "password1"
 }
 HTTP/1.1 401 Unauthorized
-Date: Wed, 18 Mar 2026 11:50:48 GMT
+Date: Wed, 18 Mar 2026 11:59:10 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
 Server: cloudflare
 vary: rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch
 x-railway-edge: railway/europe-west4-drams3a
-x-railway-request-id: u7wSBFP3QDSXo18om3z_FQ
+x-railway-request-id: Y5NRCCmRSp-FH_ns5nX1uw
 cf-cache-status: DYNAMIC
 Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
-Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=Xt1X5qmFS77jhrrh19WOE3SfnXTcwcLuxnZ0Bx%2FuSEjLuS2R%2BDNhRC8JMqMLHZAKm0YKQylgXbTCDQcPnvcJJJRJwoWLADcJiN4YETRJkMg90kwVPvRMYJUv"}]}
-CF-RAY: 9de40597cc119e60-CDG
+Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=IgUqBxpBOrZIt3732X%2BWBt8nw9ghqVzxsqS3aKR%2BQwjE2h4YsKpXrOrh6H5bVZYns77xibEtZpJ4iTwIuGPa8w5gSWopcrhcopGhN6YdST75kp8%2FtoT5YYIn"}]}
+CF-RAY: 9de411da1f1fbb81-CDG
+alt-svc: h3=":443"; ma=86400
+
+{
+    "error": "Invalid credentials"
+}
+Request method:	POST
+Request URI:	https://automationintesting.online/api/auth/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "username": "admin3",
+    "password": "password2"
+}
+HTTP/1.1 401 Unauthorized
+Date: Wed, 18 Mar 2026 11:59:10 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Server: cloudflare
+vary: rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch
+x-railway-edge: railway/europe-west4-drams3a
+x-railway-request-id: 18KpRoHUTLGh6ezurJsmnA
+cf-cache-status: DYNAMIC
+Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=leqhhjaB4poAQAgGiNldEf8f4NBx6kbeOjQRWgsAmLvMxtWyhd5A0NET3%2FwiIs3KG%2BLsLhFOtR4VTF3oyz7mdLwiiRRpiudu4GBoF%2BcMoAumn%2Fp0WtlOTdfQ"}]}
+CF-RAY: 9de411dc1fabbb18-CDG
 alt-svc: h3=":443"; ma=86400
 
 {

@@ -16,9 +16,13 @@ Feature: Hotel booking login
     Then the login should be successful
     And the users should receive an authentication token
    @Authentication @FailureLogin
-  Scenario: Admin tries to log in with an invalid password
+   Scenario Outline:Admin tries to log in with an invalid password
     When the admin enters an incorrect password
-      | username | password  |
-      | admin1   | password1 |
-    Then the login should fail
+      | username   | password   |
+      | <username> | <password> |
+     Then the login should fail
     And the admin should see an error message saying the credentials are invalid
+    Examples:
+      | username | password  |
+      | admin2   | password1 |
+      | admin3   | password2 |
