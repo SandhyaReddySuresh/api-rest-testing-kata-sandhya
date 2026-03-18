@@ -48,4 +48,9 @@ public class AdminAuthAPI extends Utils {
         tokenValueFromResponse=getJsonPath(response,"token");
         return tokenValueFromResponse;
     }
+    public static void checkErrorMessage_ForUnUnauthorizedUser()
+    {
+        String errorMessage=getJsonPath(response,"error");
+        Assert.assertNotNull("Failed to create booking",errorMessage);
+    }
 }
