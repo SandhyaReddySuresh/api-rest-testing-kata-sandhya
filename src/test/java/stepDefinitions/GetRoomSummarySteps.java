@@ -84,4 +84,6 @@ public class GetRoomSummarySteps {
     public void theResponseBodyShouldMatchTheExpectedRoomSummaryJSONSchema(String schemaJson) {
         GetRoomSummaryAPI.checkSchemaValidation(schemaJson);
     }
+
+
 }
