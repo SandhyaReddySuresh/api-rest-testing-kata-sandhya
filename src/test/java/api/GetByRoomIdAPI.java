@@ -13,6 +13,11 @@ import java.util.List;
 import java.util.Map;
 
 import static io.restassured.RestAssured.given;
+import static org.hamcrest.CoreMatchers.allOf;
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.greaterThanOrEqualTo;
+import static org.hamcrest.Matchers.lessThan;
 
 public class GetByRoomIdAPI extends Utils {
 
@@ -48,7 +53,16 @@ public class GetByRoomIdAPI extends Utils {
         Assert.assertEquals("Success status response",statusCodeResponse,statusCode);
 
     }
-
+    public static void checkInvalidStatusCode()
+    {
+        assertThat("Status code should be 4xx",
+                response.getStatusCode(), allOf(greaterThanOrEqualTo(400), lessThan(500)));
+    }
+    public static void checkErrorMessage(String expectedMessage)
+    {
+        String actualMessage = response.jsonPath().getString("error");
+        assertThat("Error message mismatch", actualMessage, equalTo(expectedMessage));
+    }
     public static void verifyRoomsDetailsPresentInResponse()
     {
         roomDetails=response.as(GetRoomIdDetails.class);
@@ -142,6 +156,25 @@ public class GetByRoomIdAPI extends Utils {
 
     public static void verifyRoomImageDetails_FromResponse() {
         Assert.assertNotNull("Image should not be null", roomDetails.getImage());
+
+    }
+
+    public static Response getByRoomIdAPIInvalidAPI_Call(String resourceDetails,String roomId) throws IOException {
+
+
+        requestSpec=given()
+                .pathParam("roomId",roomId)
+                .spec(requestSpecification())
+                .log().all();
+
+        response = requestSpec
+                .when()
+                .get(resourceDetails)
+                .then()
+                .spec(responseSpecification())
+                .log().all()
+                .extract().response();
+        return response;
 
     }
     }

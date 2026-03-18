@@ -55,4 +55,21 @@ public class GetByRoomIdSteps {
     public void theRoomShouldHaveAnImageToView() {
         GetByRoomIdAPI.verifyRoomImageDetails_FromResponse();
     }
+
+    @When("the user requests room details with room ID {string}")
+    public void the_user_requests_room_details_with_room_id(String roomId) throws IOException {
+        String resourceDetails="GetByRoomId";
+        APIResources resourcesAPI=APIResources.valueOf(resourceDetails);
+        GetByRoomIdAPI.getByRoomIdAPIInvalidAPI_Call(resourcesAPI.getResources(),roomId);
+    }
+
+    @Then("the API should return an error")
+    public void theAPIShouldReturnAnError() {
+       GetByRoomIdAPI.checkInvalidStatusCode();
+    }
+
+    @And("the error message should be {string}")
+    public void the_error_message_should_be(String expectedMessage) {
+        GetByRoomIdAPI.checkErrorMessage(expectedMessage);
+    }
 }

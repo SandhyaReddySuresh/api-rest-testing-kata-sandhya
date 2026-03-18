@@ -11,19 +11,19 @@ Cookies:		<none>
 Multiparts:		<none>
 Body:			<none>
 HTTP/1.1 200 OK
-Date: Wed, 18 Mar 2026 17:49:56 GMT
+Date: Wed, 18 Mar 2026 18:20:01 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
 Server: cloudflare
 vary: rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch
 x-railway-edge: railway/europe-west4-drams3a
-x-railway-request-id: FY1PtpQiQmKOEo_5jUJq2g
+x-railway-request-id: 0vdRTXXxSzSB3IDjw9P4nw
 cf-cache-status: DYNAMIC
 Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
-Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=neo5fhhiQsyjEC%2F80m72ifzv4S0HGAP3aHwIeYpW5fhwgHq3yMaTW9ZXi7gY%2BT6IpCFJCirp2uVwQDRuVl99pbxRohRd5a1VIAjOfGpWMxhMq1%2Fx5AGJS16%2F"}]}
+Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=lfPZyQiLLZ40CP%2BV2sN8qD3P0whJvLUnU0cUahdpuNlzfKsXdxl8VcmzF2shSnwJ9cgSUiu3UTgkKepGkuXNcJLEEVxdf385RpYoUu4%2FjDV8YUTUIyc9zOUk"}]}
 Content-Encoding: gzip
-CF-RAY: 9de613a938836ff9-CDG
+CF-RAY: 9de63fbd1a41e8ce-CDG
 alt-svc: h3=":443"; ma=86400
 
 {
@@ -85,19 +85,19 @@ Cookies:		<none>
 Multiparts:		<none>
 Body:			<none>
 HTTP/1.1 200 OK
-Date: Wed, 18 Mar 2026 17:49:56 GMT
+Date: Wed, 18 Mar 2026 18:20:01 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
 Server: cloudflare
 vary: rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch
 x-railway-edge: railway/europe-west4-drams3a
-x-railway-request-id: 5kOzrAyFRe2ikNUkjUJq2g
+x-railway-request-id: OYDULNTrSRq_5lVo2JZdWA
 cf-cache-status: DYNAMIC
 Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
-Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=QwiCdB65oq4ee2y3OafV4mySfMlul4zFG85YJhBP5AN%2FQELcJHCGoaKsK%2FgXXUie5bDkzFh9yFyiqwwt9xeyX2SB038Q1CVj4O8u%2BaE9v5Cb4lHvY7D3%2Bh%2BE"}]}
+Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=Ongv4jhmOFL6CPNKA4GCqGWDCMj2ll3acRXsIcOFZ1rF1VlxhFKxzJmXVl15RgDM1S37Q1O0k7CeaS2S%2F6I%2FCF0m%2FIEyAj5tiTtcccAFNP9z2U2bKcQfdmKL"}]}
 Content-Encoding: gzip
-CF-RAY: 9de613aebd5e6f52-CDG
+CF-RAY: 9de63fc01a60d11c-CDG
 alt-svc: h3=":443"; ma=86400
 
 {
@@ -113,4 +113,281 @@ alt-svc: h3=":443"; ma=86400
         "Safe"
     ],
     "roomPrice": 225
+}
+Request method:	GET
+Request URI:	https://automationintesting.online/api/room/abc
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	roomId=abc
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 404 Not Found
+Date: Wed, 18 Mar 2026 18:20:02 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Server: cloudflare
+vary: rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch
+x-railway-edge: railway/europe-west4-drams3a
+x-railway-request-id: 7AM9J1K7TyuL4l-Zm3z_FQ
+cf-cache-status: DYNAMIC
+Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=OLDrl%2BcTz5TIiSpWQUBnAz63T0CX%2Fom%2F1iCO2ZUSzB1lsb5PYlrryYcCEhtMVg8Q2dnWyz8ys8f3B19TtliYdBva2aCwuwkxEPqOPIl%2FyIljPKBnrCfSjKPH"}]}
+Content-Encoding: gzip
+CF-RAY: 9de63fc188bed532-CDG
+alt-svc: h3=":443"; ma=86400
+
+{
+    "timestamp": "2026-03-18T18:20:02.195+00:00",
+    "status": 404,
+    "error": "Not Found",
+    "path": "/room/abc"
+}
+Request method:	GET
+Request URI:	https://automationintesting.online/api/room/-1
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	roomId=-1
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 404 Not Found
+Date: Wed, 18 Mar 2026 18:20:02 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Server: cloudflare
+vary: rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch
+x-railway-edge: railway/europe-west4-drams3a
+x-railway-request-id: LnGq-JEwSf2qarBWm3z_FQ
+cf-cache-status: DYNAMIC
+Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=xaLeCH8cK9rkRnttU97V%2BLnj8SUu8Aq9yfZeU2%2BrqvMXNmThf850mHJ05iiPkfcvrmUPLxkxFH4QFFDvny48ln%2BVdfaFQHyNIphFR5ryhXaDDeHVH0ERSMU1"}]}
+Content-Encoding: gzip
+CF-RAY: 9de63fc60b08d526-CDG
+alt-svc: h3=":443"; ma=86400
+
+{
+    "timestamp": "2026-03-18T18:20:02.912+00:00",
+    "status": 404,
+    "error": "Not Found",
+    "path": "/room/-1"
+}
+Request method:	GET
+Request URI:	https://automationintesting.online/api/room/99999
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	roomId=99999
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 500 Internal Server Error
+Date: Wed, 18 Mar 2026 18:20:35 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Server: cloudflare
+vary: rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch
+x-railway-edge: railway/europe-west4-drams3a
+x-railway-request-id: fcWTDDzDTA6uKShnjUJq2g
+cf-cache-status: DYNAMIC
+Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=5ePEYWELo9sPb1UD0h%2FPUF6IjJJdu3h3cQG5weEJCqDoJwa9Eo4XGVKJEH4CcoGxg%2BOz%2BjjPHPInNCuZA9eQ%2FE5kNv5CSQcKoo50RkGcHY2E8AcQ66dvF6Jw"}]}
+CF-RAY: 9de63fc7cf5dd65a-CDG
+alt-svc: h3=":443"; ma=86400
+
+{
+    "timestamp": "2026-03-18T18:20:35.790+00:00",
+    "status": 500,
+    "error": "Internal Server Error",
+    "path": "/room/99999"
+}
+Request method:	GET
+Request URI:	https://automationintesting.online/api/room/1.5
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	roomId=1.5
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 404 Not Found
+Date: Wed, 18 Mar 2026 18:20:36 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Server: cloudflare
+vary: rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch
+x-railway-edge: railway/europe-west4-drams3a
+x-railway-request-id: nJOMvU8gTTy17upc2JZdWA
+cf-cache-status: DYNAMIC
+Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=2vZurVD%2Fek2pj1umccCsXfF3h6uaWGLG%2F%2Bd4JDPWWHf6mK9rY1dlztS2%2FbCa7lIN4tH%2FTyqc2bk08%2F51Z3c4vkMSDeeuP1ClcKeIr3tRxJyzkdBj5swKbjLK"}]}
+Content-Encoding: gzip
+CF-RAY: 9de640956b6ad145-CDG
+alt-svc: h3=":443"; ma=86400
+
+{
+    "timestamp": "2026-03-18T18:20:36.088+00:00",
+    "status": 404,
+    "error": "Not Found",
+    "path": "/room/1.5"
+}
+Request method:	GET
+Request URI:	https://automationintesting.online/api/room/%21%40%23
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	roomId=!@#
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 404 Not Found
+Date: Wed, 18 Mar 2026 18:20:36 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Server: cloudflare
+vary: rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch
+x-railway-edge: railway/europe-west4-drams3a
+x-railway-request-id: aqpvVyIxSaCggeCX2JZdWA
+cf-cache-status: DYNAMIC
+Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=KRyLv7IUK00CEx8Im109v%2FFeBW0GfMAa4nEiGbR35gUZHpq9hRXgV7TbJEoD1vjZ0CICMIifGpWB2IvaXMvZiTWLfqCDE48%2BgLcTtykQ8JYyJrv8Z%2BCjXATi"}]}
+Content-Encoding: gzip
+CF-RAY: 9de640970ca57033-CDG
+alt-svc: h3=":443"; ma=86400
+
+{
+    "timestamp": "2026-03-18T18:20:36.353+00:00",
+    "status": 404,
+    "error": "Not Found",
+    "path": "/room/!@"
+}
+Request method:	GET
+Request URI:	https://automationintesting.online/api/room/
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	roomId=
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Date: Wed, 18 Mar 2026 18:20:36 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Server: cloudflare
+vary: rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch
+x-railway-edge: railway/europe-west4-drams3a
+x-railway-request-id: LGc5dilpS_-y5wXSm3z_FQ
+cf-cache-status: DYNAMIC
+Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=IU7AzgI%2FF3gyWqcB47qgKhZDTnldffNRJlBEd%2F4ns3%2FTUmB6Nk%2FuYS%2FJJIIwmVILny8gJbKGmOARF0qRLlNuI7BrHfwW7Snqnykju5fvT9GxQVDgdYzeV7u3"}]}
+Content-Encoding: gzip
+CF-RAY: 9de640992bbce198-CDG
+alt-svc: h3=":443"; ma=86400
+
+{
+    "rooms": [
+        {
+            "roomid": 1,
+            "roomName": "101",
+            "type": "Single",
+            "accessible": true,
+            "image": "/images/room1.jpg",
+            "description": "Aenean porttitor mauris sit amet lacinia molestie. In posuere accumsan aliquet. Maecenas sit amet nisl massa. Interdum et malesuada fames ac ante.",
+            "features": [
+                "TV",
+                "WiFi",
+                "Safe"
+            ],
+            "roomPrice": 100
+        },
+        {
+            "roomid": 2,
+            "roomName": "102",
+            "type": "Double",
+            "accessible": true,
+            "image": "/images/room2.jpg",
+            "description": "Vestibulum sollicitudin, lectus ac mollis consequat, lorem orci ultrices tellus, eleifend euismod tortor dui egestas erat. Phasellus et ipsum nisl. ",
+            "features": [
+                "TV",
+                "Radio",
+                "Safe"
+            ],
+            "roomPrice": 150
+        },
+        {
+            "roomid": 3,
+            "roomName": "103",
+            "type": "Suite",
+            "accessible": true,
+            "image": "/images/room3.jpg",
+            "description": "Etiam metus metus, fringilla ac sagittis id, consequat vel neque. Nunc commodo quis nisl nec posuere. Etiam at accumsan ex. ",
+            "features": [
+                "Radio",
+                "WiFi",
+                "Safe"
+            ],
+            "roomPrice": 225
+        }
+    ]
+}
+Request method:	GET
+Request URI:	https://automationintesting.online/api/room/null
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	roomId=null
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 404 Not Found
+Date: Wed, 18 Mar 2026 18:20:36 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Server: cloudflare
+vary: rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch
+x-railway-edge: railway/europe-west4-drams3a
+x-railway-request-id: a96EyYsCTNmDQDmjss7a6g
+cf-cache-status: DYNAMIC
+Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=8PAHbEnmhFIEOrWYRqYYy9FqBLJm6PaTW%2FSPM81k4FcXnUU49wMzAc6OBBxqDpDER%2BNZUfgWRdNAUWiRpvsjNxuyJIgEGjJNV%2Bgg3je7CXbE1mf06%2BhkWDwi"}]}
+Content-Encoding: gzip
+CF-RAY: 9de6409a48a93cbd-CDG
+alt-svc: h3=":443"; ma=86400
+
+{
+    "timestamp": "2026-03-18T18:20:36.915+00:00",
+    "status": 404,
+    "error": "Not Found",
+    "path": "/room/null"
 }
