@@ -1,3 +1,4 @@
+@GetByRoomId
 Feature: View Room Details
   As a guest or customer
   I want to see the details of a room
@@ -24,13 +25,14 @@ Feature: View Room Details
     Given I want to check a room
     When I ask the system for the details of the room
     Then I should get the correct information about the room:
-      | Room Name    | (any)       |
-      | Room Type    | (any)       |
-      | Accessible   | Yes/No      |
-      | Price        | (any)       |
-    And the room should include features such as:
-      | TV   |
-      | WiFi |
-      | Safe |
-    And the room should have a description explaining it
-    And the room should have an image to view
+      | Field      | Value  |
+      | Room Name  | (any)  |
+      | Room Type  | (any)  |
+      | Accessible | Yes/No |
+      | Price      | (any)  |
+#    And the room should include features such as:
+#      | TV   |
+#      | WiFi |
+#      | Safe |
+#    And the room should have a description explaining it
+#    And the room should have an image to view

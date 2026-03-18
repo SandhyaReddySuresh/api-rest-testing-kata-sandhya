@@ -2,6 +2,7 @@ package stepDefinitions;
 
 import api.GetByRoomIdAPI;
 import api.ListOfRoomsAPI;
+import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -9,6 +10,8 @@ import utils.APIResources;
 import utils.ConfigReader;
 
 import java.io.IOException;
+import java.util.List;
+import java.util.Map;
 
 public class GetByRoomIdSteps {
 
@@ -21,14 +24,21 @@ public class GetByRoomIdSteps {
 
     @When("I ask the system for the details of the room")
     public void iAskTheSystemForTheDetailsOfTheRoom() throws IOException {
-        String resourceDetails="ListOfRoomsAPI";
+        String resourceDetails="GetByRoomId";
         APIResources resourcesAPI=APIResources.valueOf(resourceDetails);
         GetByRoomIdAPI.getByRoomIdAPI_Call(resourcesAPI.getResources(),roomIdFromListOfRoom);
     }
 
     @Then("I should get the correct information about the room:")
-    public void iShouldGetTheCorrectInformationAboutTheRoom() throws IOException {
+    public void iShouldGetTheCorrectInformationAboutTheRoom(DataTable dataTable) throws IOException {
+        List<Map<String, String>> rows = dataTable.asMaps(String.class, String.class);
+
         int statusCode= ConfigReader.getIntProperty("SuccessStatusCode");
         GetByRoomIdAPI.checkStatusCode(String.valueOf(statusCode));
+        GetByRoomIdAPI.verifyRoomsDetailsPresentInResponse();
+        GetByRoomIdAPI.validateRoomsDetailsFromResponse(rows,roomIdFromListOfRoom);
+
+
+
     }
 }
