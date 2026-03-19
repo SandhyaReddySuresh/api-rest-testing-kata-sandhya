@@ -7,6 +7,11 @@ Feature: Room Availability API
 
   Background:
     Given the booking system is operational
+    When the admin enters the correct username and password
+      | username | password |
+      | admin    | password |
+    Then the login should be successful
+    And the users should receive an authentication token
 
   # Positive scenarios
   Scenario: Successfully retrieve available rooms for valid date range

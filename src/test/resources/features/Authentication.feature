@@ -9,7 +9,7 @@ Feature: Hotel booking login
   Background:
     Given the booking system is operational
 
-    @Authentication @SuccessLogin
+
   Scenario: Users logs in with valid credentials
     When the admin enters the correct username and password
       | username | password |
@@ -17,7 +17,7 @@ Feature: Hotel booking login
     Then the login should be successful
     And the users should receive an authentication token
 
-   @Authentication @FailureLogin
+
    Scenario Outline:Admin tries to log in with an invalid password
     When the admin enters an incorrect password
       | username   | password   |

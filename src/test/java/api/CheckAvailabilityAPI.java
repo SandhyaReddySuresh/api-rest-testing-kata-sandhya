@@ -22,10 +22,12 @@ public class CheckAvailabilityAPI extends Utils {
 
     public static Response getCheckAvailabilityAPI_Call(String resourceDetails,String CheckIn, String CheckOut) throws IOException {
 
+        String tokenValue = AdminAuthAPI.checkTokenDetails();
 
         requestSpec=given()
                 .queryParam("checkin",CheckIn)
                 .queryParam("CheckOut",CheckOut)
+                .header("Cookie", "token=" + tokenValue)
                 .spec(requestSpecification())
                 .log().all();
 
