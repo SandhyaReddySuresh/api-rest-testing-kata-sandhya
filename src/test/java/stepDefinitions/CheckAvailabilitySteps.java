@@ -41,7 +41,7 @@ public class CheckAvailabilitySteps {
         CheckAvailabilityAPI.checkErrorMessage(errorMessage);
     }
 
-    @And("“Room availability information is returned in a format compliant with the JSON schema")
+    @And("Room availability information is returned in a format compliant with the JSON schema")
     public void roomAvailabilityInformationIsReturnedInAFormatCompliantWithTheJSONSchema() {
         CheckAvailabilityAPI.checkSchemaValidation();
     }

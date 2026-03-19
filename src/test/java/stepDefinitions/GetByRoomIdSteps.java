@@ -25,6 +25,7 @@ public class GetByRoomIdSteps {
 
     @When("I ask the system for the details of the room")
     public void iAskTheSystemForTheDetailsOfTheRoom() throws IOException {
+        roomIdFromListOfRoom=ListOfRoomsAPI.roomId;
         String resourceDetails="GetByRoomId";
         APIResources resourcesAPI=APIResources.valueOf(resourceDetails);
         GetByRoomIdAPI.getByRoomIdAPI_Call(resourcesAPI.getResources(),roomIdFromListOfRoom);

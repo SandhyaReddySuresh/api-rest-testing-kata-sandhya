@@ -21,7 +21,7 @@ Feature: Room Availability API
       | description |
       | features    |
       | roomPrice   |
-    And “Room availability information is returned in a format compliant with the JSON schema
+    And Room availability information is returned in a format compliant with the JSON schema
 
 
   # Negative scenarios
