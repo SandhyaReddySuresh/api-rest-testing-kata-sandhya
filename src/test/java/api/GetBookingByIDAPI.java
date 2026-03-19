@@ -3,6 +3,8 @@ package api;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import org.junit.Assert;
+import pojo.BookingResponse;
+import pojo.GetRoomIdDetails;
 import utils.Utils;
 
 import java.io.IOException;
@@ -39,7 +41,12 @@ public class GetBookingByIDAPI extends Utils {
         Assert.assertEquals(statusCodeResponse,statusCode);
 
     }
+    public static void verifyRoomsDetailsPresentInResponse()
+    {
+        BookingResponse booking =response.as(BookingResponse.class);
+        Assert.assertNotNull("the system should present the booking’s full details",booking);
 
+    }
     public static void checkErrorMessage(String ExpectedErrorMessage) {
         String actualErrorMessage = getJsonPath(response, "error");
 

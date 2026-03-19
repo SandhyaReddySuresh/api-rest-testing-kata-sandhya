@@ -28,9 +28,11 @@ public class GetByRoomIdAPI extends Utils {
 
     public static Response getByRoomIdAPI_Call(String resourceDetails,int roomId) throws IOException {
 
+        String tokenValue= AdminAuthAPI.checkTokenDetails();
 
         requestSpec=given()
                 .pathParam("roomId",roomId)
+                .header("Cookie", "token=" + tokenValue)
                 .spec(requestSpecification())
                 .log().all();
 

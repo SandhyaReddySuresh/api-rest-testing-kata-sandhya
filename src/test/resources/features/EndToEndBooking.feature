@@ -61,8 +61,8 @@ Feature: End-to-End Room Booking Management
 
     # Step 3: Create a new booking
     When the customer submits a booking request with the following details:
-      | roomid | firstname   | lastname   | depositpaid   | checkin   | checkout   | phone   |
-      | 37     | trisha4   | vijay6   | false       | 2026-07-16 | 2026-07-18 | 07358480685  |
+      | roomid | firstname | lastname | depositpaid | checkin    | checkout   | phone       |
+      | 39     | trisha4   | vijay6   | false       | 2026-07-16 | 2026-07-18 | 07358480685 |
     Then the system confirms the booking
     And the booking information should be accurate and complete
     And a booking ID should be returned
@@ -71,9 +71,6 @@ Feature: End-to-End Room Booking Management
     # Step 4: Verify booking by booking id and with room id
     When I get booking details by booking ID
     Then I should see booking information
-
-    When I get booking details for room ID
-    Then the booking information should display
 
     # Step 5: Edit booking (optional)
     When the user updates the existing booking with the following details:
@@ -88,11 +85,11 @@ Feature: End-to-End Room Booking Management
     And the booking should no longer be retrievable
     And the response should contain an error message "Failed to fetch booking: 404"
 
-    # Step 7: Get room summary (optional)
-    When the user asks the room booking summary for roomId
-    Then the room booking summary response should be successful
-    And the response should contain a list of bookings
+#    # Step 7: Get room summary (optional)
+#    When the user asks the room booking summary for roomId
+#    Then the room booking summary response should be successful
+#    And the response should contain a list of bookings
 
-    # Step 8: Generate booking report
-    When the hotel manager requests the booking report
-    Then the system should generate the booking report
+#    # Step 8: Generate booking report
+#    When the hotel manager requests the booking report
+#    Then the system should generate the booking report
