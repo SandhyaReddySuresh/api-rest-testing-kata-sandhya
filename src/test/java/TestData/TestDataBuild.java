@@ -1,6 +1,7 @@
 package TestData;
 
 import pojo.BookingDates;
+import pojo.BookingResponse;
 import pojo.CreateBooking;
 
 public class TestDataBuild {
@@ -21,5 +22,21 @@ public class TestDataBuild {
         bookingDetails.setEmail(email);
         bookingDetails.setPhone(phone);
         return bookingDetails;
+    }
+
+    public BookingResponse updateBookingDetailsPayload(int BookingId, int RoomId, String firstname, String lastname, boolean depositpaid, Object Checkin, Object checkout)
+    {
+        BookingResponse bookingById=new BookingResponse();
+        bookingById.setBookingid(BookingId);
+        bookingById.setRoomid(RoomId);
+        bookingById.setFirstname(firstname);
+        bookingById.setLastname(lastname);
+        bookingById.setDepositpaid(depositpaid);
+        BookingDates bookingDatesForUpdate=new BookingDates();
+        bookingDatesForUpdate.setCheckin(Checkin);
+        bookingDatesForUpdate.setCheckout(checkout);
+        bookingById.setBookingdates(bookingDatesForUpdate);
+
+        return bookingById;
     }
 }
