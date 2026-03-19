@@ -1,5 +1,4 @@
-@HotelBooking-Regression
-@ListOfRoomsDetails
+@ListOfRoomsDetails @HotelBookingRegression
 Feature: Fetch all rooms
   As a user
   I want to fetch all rooms from the system

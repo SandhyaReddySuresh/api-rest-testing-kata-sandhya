@@ -1,5 +1,4 @@
-@HotelBooking-Regression
-@CreateBooking
+@CreateBooking @HotelBookingRegression
 Feature: Customer Room Booking
 As a guest or customer
 I want to book a room through the booking system

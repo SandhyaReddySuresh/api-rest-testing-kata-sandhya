@@ -1,5 +1,4 @@
-@HotelBooking-Regression
-@BookingReport
+@BookingReport @HotelBookingRegression
 Feature: Generate hotel booking report
   In order to monitor hotel performance and occupancy
   As a hotel manager

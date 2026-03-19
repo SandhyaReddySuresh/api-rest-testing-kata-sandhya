@@ -1,5 +1,4 @@
-@HotelBooking-Regression
-@DeleteBooking
+@DeleteBooking @HotelBookingRegression
 Feature: Cancel hotel booking
   As a guest
   I want to cancel an existing booking

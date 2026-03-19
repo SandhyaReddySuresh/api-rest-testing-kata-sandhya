@@ -1,5 +1,4 @@
-@HotelBooking-Regression
-@UpdateBooking
+@UpdateBooking @HotelBookingRegression
 Feature: Edit hotel booking
   As a registered user
   I want to edit an existing booking

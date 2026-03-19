@@ -1,5 +1,4 @@
-@HotelBooking-Regression
-@Login
+@Login @HotelBookingRegression
 Feature: Hotel booking login
    Login to Hotel Booking System
    As a guest or hotel manager

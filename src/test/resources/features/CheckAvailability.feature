@@ -1,5 +1,4 @@
-@HotelBooking-Regression
-@CheckAvailabilityAPI
+@CheckAvailabilityAPI @HotelBookingRegression
 Feature: Room Availability API
   As a hotel booking system user
   I want to check available rooms for a given date range
