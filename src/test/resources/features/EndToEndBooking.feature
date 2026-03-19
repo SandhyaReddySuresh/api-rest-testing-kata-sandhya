@@ -61,8 +61,8 @@ Feature: End-to-End Room Booking Management
 
     # Step 3: Create a new booking
     When the customer submits a booking request with the following details:
-      | roomid | firstname | lastname | depositpaid | checkin    | checkout   | phone       |
-      | 39     | trisha4   | vijay6   | false       | 2026-07-16 | 2026-07-18 | 07358480685 |
+      | roomid | firstname  | lastname  | depositpaid | checkin    | checkout   | phone       |
+      | 40     | CFirstName | CLastName | false       | 2026-07-16 | 2026-07-18 | 07358480685 |
     Then the system confirms the booking
     And the booking information should be accurate and complete
     And a booking ID should be returned
@@ -74,8 +74,8 @@ Feature: End-to-End Room Booking Management
 
     # Step 5: Edit booking (optional)
     When the user updates the existing booking with the following details:
-      | firstname | lastname | depositpaid | checkin    | checkout   |
-      | Lion      | Dear     | false       | 2026-01-11 | 2026-01-12 |
+      | firstname  | lastname  | depositpaid | checkin    | checkout   |
+      | BFirstName | BLastName | false       | 2026-01-11 | 2026-01-12 |
     Then the booking should be successfully updated
 
     # Step 6: Delete booking (optional)

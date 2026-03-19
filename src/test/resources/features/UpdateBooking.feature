@@ -21,13 +21,13 @@ Feature: Edit hotel booking
     And a booking ID should be returned
     And a room Id should be returned
     Examples:
-      | roomid | firstname | lastname | depositpaid | checkin    | checkout   | phone       |
-      | 37     | trisha4   | vijay6   | false       | 2026-07-16 | 2026-07-18 | 07358480685 |
+      | roomid | firstname  | lastname  | depositpaid | checkin    | checkout   | phone       |
+      | 40     | KFirstName | DLastName | false       | 2026-07-16 | 2026-07-18 | 07387480685 |
 
   Scenario: Update an existing booking
     When the user updates the existing booking with the following details:
       | firstname | lastname | depositpaid | checkin    | checkout   |
-      | Lion      | Dear     | false       | 2026-01-11 | 2026-01-12 |
+      | Lion      | King     | false       | 2026-01-11 | 2026-01-12 |
     Then the booking should be successfully updated
 
   Scenario: View updated booking details for a room
