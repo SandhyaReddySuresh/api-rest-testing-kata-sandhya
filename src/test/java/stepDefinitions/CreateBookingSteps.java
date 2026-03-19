@@ -17,6 +17,7 @@ public class CreateBookingSteps {
     @When("the customer submits a booking request with the following details:")
     public void theCustomerSubmitsABookingRequestWithTheFollowingDetails(DataTable dataTable) throws IOException {
         Map<String, String> bookingData = dataTable.asMaps(String.class, String.class).get(0);
+        String roomId= bookingData.get("roomid");
         String firstname = bookingData.get("firstname");
         String lastname=bookingData.get("lastname");
         boolean depositPaid= Boolean.parseBoolean(bookingData.get("depositpaid"));
@@ -26,7 +27,7 @@ public class CreateBookingSteps {
 
         String resourceDetails="CreateBookingAPI";
         APIResources resourcesAPI=APIResources.valueOf(resourceDetails);
-        CreateBookingAPI.postCreateBooking(resourcesAPI.getResources(),firstname,lastname,depositPaid,checkIn,checkOut,phone);
+        CreateBookingAPI.postCreateBooking(resourcesAPI.getResources(),roomId,firstname,lastname,depositPaid,checkIn,checkOut,phone);
 
     }
 

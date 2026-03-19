@@ -28,10 +28,10 @@ public class CreateBookingAPI extends Utils {
     public static int bookingID;
     public static int roomId;
     static TestDataBuild testData=new TestDataBuild();
-    public static Response postCreateBooking(String resourceDetails, String firstname, String lastname, boolean depositpaid, String checkin, String checkout, String phone) throws IOException {
+    public static Response postCreateBooking(String resourceDetails,String roomid,String firstname, String lastname, boolean depositpaid, String checkin, String checkout, String phone) throws IOException {
         String tokenValue= AdminAuthAPI.checkTokenDetails();
 
-        bookingPayload = testData.createBookingPayLoad(firstname,lastname,depositpaid,checkin,checkout,phone);
+        bookingPayload = testData.createBookingPayLoad(roomid,firstname,lastname,depositpaid,checkin,checkout,phone);
 
         requestSpec=given()
                .header("Cookie", "token=" + tokenValue)

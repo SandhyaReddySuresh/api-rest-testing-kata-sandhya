@@ -16,6 +16,7 @@ So that I can reserve my stay and receive a booking confirmation with all detail
       | firstname   | lastname   | depositpaid   | checkin   | checkout   | phone   |
       | <firstname> | <lastname> | <depositpaid> | <checkin> | <checkout> | <phone> |
     Then the system confirms the booking
+    And the booking information should be accurate and complete
     And a booking ID should be returned
     And the response body should match the expected JSON schema "createBooking-schema.json"
 

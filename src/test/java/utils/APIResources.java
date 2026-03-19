@@ -8,7 +8,9 @@ public enum APIResources {
     CheckAvailability("/api/room"),
     GetByRoomId("/api/room/{roomId}"),
     CreateBookingAPI("/api/booking"),
-    GetReportSummary("/api/report");
+    GetReportSummary("/api/report"),
+    UpdateBookingDetails("/api/booking/{BookingID}");
+
 
 
     private String resourceAPI;

@@ -6,10 +6,10 @@ import pojo.CreateBooking;
 
 public class TestDataBuild {
     CreateBooking bookingDetails =new CreateBooking();
-    public  CreateBooking createBookingPayLoad(String firstname, String lastname, boolean depositpaid, String Checkin, String checkout, String phone)
+    public  CreateBooking createBookingPayLoad(String roomid,String firstname, String lastname, boolean depositpaid, String Checkin, String checkout, String phone)
     {
 
-        String roomid= String.valueOf(RoomIdGenerator.randomRoomID());
+//        String roomid= String.valueOf(RoomIdGenerator.randomRoomID());
         bookingDetails.setRoomid(roomid);
         bookingDetails.setFirstname(firstname);
         bookingDetails.setLastname(lastname);
