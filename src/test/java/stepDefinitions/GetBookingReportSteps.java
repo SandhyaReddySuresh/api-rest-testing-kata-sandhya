@@ -25,4 +25,6 @@ public class GetBookingReportSteps {
         GetBookingReportAPI.getBookingReportSummaryAPI_Response();
 
     }
+
+
 }
