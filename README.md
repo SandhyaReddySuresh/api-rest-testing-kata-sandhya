@@ -148,20 +148,20 @@ After execution, Serenity automatically generates detailed reports.
 📍 Location:
 
 target/site/serenity/index.html
-  ![Screenshot](\src\test\resources\images\Screenshot 2026-03-19 200050.png)
+  ![Screenshot](\src\test\resources\images\Screenshot_2026-03-19_8.png)
 
 Reports include:
 - Test execution summary
 - Step-by-step results
 - Request & response details
 - Failure analysis
-  ![Screenshot](\src\test\resources\images\Screenshot 2026-03-19 184438.png)
-  ![Screenshot](\src\test\resources\images\Screenshot 2026-03-19 184600.png)
-  ![Screenshot](\src\test\resources\images\Screenshot 2026-03-19 184652.png)
-  ![Screenshot](\src\test\resources\images\Screenshot 2026-03-19 184735.png)
-  ![Screenshot](\src\test\resources\images\Screenshot 2026-03-19 184806.png)
-  ![Screenshot](\src\test\resources\images\Screenshot 2026-03-19 184835.png)
-  ![Screenshot](\src\test\resources\images\Screenshot 2026-03-19 184935.png)
+  ![Screenshot](\src\test\resources\images\Screenshot_2026-03-19_1.png)
+  ![Screenshot](\src\test\resources\images\Screenshot_2026-03-19_2.png)
+  ![Screenshot](\src\test\resources\images\Screenshot_2026-03-19_3.png)
+  ![Screenshot](\src\test\resources\images\Screenshot_2026-03-19_4.png)
+  ![Screenshot](\src\test\resources\images\Screenshot_2026-03-19_5.png)
+  ![Screenshot](\src\test\resources\images\Screenshot_2026-03-19_6.png)
+  ![Screenshot](\src\test\resources\images\Screenshot_2026-03-19_7.png)
 
 
 
