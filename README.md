@@ -99,6 +99,48 @@ The test suite covers the following scenarios:
 - Editing/Deleting a booking
 - Fetch the booking report
 
+🔍 APIs Covered
+
+Get Room Details
+
+GET /api/room/{roomId}
+
+Search Available Rooms
+
+GET /api/room?checkin={Date}&checkout={Date}
+
+ListOfRooms
+
+GET /api/room
+
+Booking Report
+
+GET /api/report
+
+Login Auth
+
+POST /api/auth/login
+
+Create Booking
+
+POST /api/booking
+
+Cancel Booking
+
+DELETE /api/booking/{bookingId}
+
+Room Summary By RoomId
+
+GET /api/booking?roomid={id}
+
+Modify Booking
+
+PUT /api/booking/{bookingId}
+
+GET Booking Details By Booking ID
+
+GET /api/booking/{bookingId}
+
 📊 Test Reports (Serenity)
 
 After execution, Serenity automatically generates detailed reports.
@@ -106,6 +148,7 @@ After execution, Serenity automatically generates detailed reports.
 📍 Location:
 
 target/site/serenity/index.html
+  ![Screenshot](\src\test\resources\images\Screenshot 2026-03-19 200050.png)
 
 Reports include:
 - Test execution summary
