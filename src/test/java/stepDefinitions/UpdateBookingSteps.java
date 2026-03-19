@@ -4,6 +4,7 @@ import api.BookingDetailsByRoomIdAPI;
 import api.CreateBookingAPI;
 import api.UpdateBookingAPI;
 import io.cucumber.datatable.DataTable;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import utils.APIResources;
@@ -46,4 +47,6 @@ public class UpdateBookingSteps {
         BookingDetailsByRoomIdAPI.getBookingAndRoomId_FromResponse();
          UpdateBookingAPI.checkUpdateDetails_InResponse();
     }
+
+
 }

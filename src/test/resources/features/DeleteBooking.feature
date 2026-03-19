@@ -12,12 +12,23 @@ Feature: Cancel hotel booking
     Then the login should be successful
     And the users should receive an authentication token
 
+  Scenario Outline: Customer successfully books a room
+    When the customer submits a booking request with the following details:
+      | roomid | firstname   | lastname   | depositpaid   | checkin   | checkout   | phone       |
+      | <roomid> | <firstname> | <lastname> | <depositpaid> | <checkin> | <checkout> | <phone>   |
+    Then the system confirms the booking
+    And the booking information should be accurate and complete
+    And a booking ID should be returned
+    And a room Id should be returned
+    Examples:
+      | roomid | firstname | lastname | depositpaid | checkin    | checkout   | phone       |
+      | 38     | trisha4   | vijay6   | false       | 2026-07-16 | 2026-07-18 | 07358480685 |
+
   Scenario: Cancel an existing booking successfully
-    And a booking exists with booking ID
-    And a booking exists with room ID
-    When the user deletes the booking
-    Then the booking should be deleted successfully
-    And the user should receive a confirmation of deletion
+    And a booking exists with booking id
+    When the user cancels the booking
+    Then the booking should be successfully cancelled
+    And the booking should no longer be retrievable
 
   Scenario: Delete a booking using an invalid booking ID
     When the user attempts to delete a booking with an invalid booking ID
