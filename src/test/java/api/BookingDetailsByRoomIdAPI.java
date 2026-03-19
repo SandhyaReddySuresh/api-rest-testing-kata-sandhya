@@ -13,6 +13,9 @@ import java.io.IOException;
 import java.util.List;
 
 import static io.restassured.RestAssured.given;
+import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 public class BookingDetailsByRoomIdAPI extends Utils {
 
@@ -82,5 +85,18 @@ public class BookingDetailsByRoomIdAPI extends Utils {
                 }
             }
         }
+    }
+
+    public static void checkErrorMessage(String expectedMessage)
+    {
+        String actualMessage = response.jsonPath().getString("error");
+        assertThat("Error message mismatch", actualMessage, equalTo(expectedMessage));
+    }
+
+    public static void validateInvalidResponse() {
+        response.then()
+                .assertThat()
+                .body("bookings.size()", equalTo(0));
+        Assert.fail("the system should inform the customer that the selected room is invalid");
     }
 }

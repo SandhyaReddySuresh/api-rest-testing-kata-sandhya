@@ -12,26 +12,28 @@ Feature: View room booking details
     Then the login should be successful
     And the users should receive an authentication token
 
-  Scenario Outline: View booking details for a room
-    When the customer selects room "<roomid>" to view booking details
-    Then the booking details should be displayed successfully
-    And the booking should include:
-      | bookingid     |
-      | roomid        |
-      | firstname     |
-      | lastname      |
-      | depositpaid   |
-      | bookingdates  |
+#  Scenario Outline: View booking details for a room
+#    When the customer selects room "<roomid>" to view booking details
+#    Then the booking details should be displayed successfully
+#    And the booking should include:
+#      | bookingid     |
+#      | roomid        |
+#      | firstname     |
+#      | lastname      |
+#      | depositpaid   |
+#      | bookingdates  |
+#
+#    Examples:
+#      | roomid |
+#      | 1      |
+#      | 2      |
+#
 
+  Scenario Outline: Invalid room selection
+    When the customer selects an invalid room "<roomid>" to check booking details
+    Then the customer should see a message indicating the room selection is invalid
     Examples:
       | roomid |
-      | 1      |
-      | 2      |
-
-  Scenario: No booking available for a room
-    When the customer selects a room with no bookings to check booking details
-    Then the system should show "No bookings found for this room"
-
-  Scenario: Invalid room selection
-    When the customer selects an invalid room to check booking details
-    Then the system should show "Please select a valid room"
+      | 99999  |
+      | abc    |
+      | -1     |

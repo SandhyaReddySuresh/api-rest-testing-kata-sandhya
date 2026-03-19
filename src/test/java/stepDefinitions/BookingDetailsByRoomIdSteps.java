@@ -34,18 +34,16 @@ public class BookingDetailsByRoomIdSteps {
         List<String> expectedFields = dataTable.asList();
         BookingDetailsByRoomIdAPI.verifyEachBookingDetails_FromResponse(expectedFields);
     }
-
-    @When("the customer selects a room with no bookings to check booking details")
-    public void theCustomerSelectsARoomWithNoBookingsToCheckBookingDetails() {
-        
+    @When("the customer selects an invalid room {string} to check booking details")
+    public void theCustomerSelectsAnInvalidRoomToCheckBookingDetails(String roomId) throws IOException {
+        String resourceDetails="CreateBookingAPI";
+        APIResources resourcesAPI=APIResources.valueOf(resourceDetails);
+        BookingDetailsByRoomIdAPI.getBookingDetailsById(resourcesAPI.getResources(),roomId);
     }
 
-    @Then("the system should show {string}")
-    public void theSystemShouldShow(String arg0) {
-        
-    }
+    @Then("the customer should see a message indicating the room selection is invalid")
+    public void theCustomerShouldSeeAMessageIndicatingTheRoomSelectionIsInvalid() {
+        BookingDetailsByRoomIdAPI.validateInvalidResponse();
 
-    @When("the customer selects an invalid room to check booking details")
-    public void theCustomerSelectsAnInvalidRoomToCheckBookingDetails() {
     }
 }
