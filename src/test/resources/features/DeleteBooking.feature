@@ -22,14 +22,16 @@ Feature: Cancel hotel booking
     And a room Id should be returned
     Examples:
       | roomid | firstname | lastname | depositpaid | checkin    | checkout   | phone       |
-      | 38     | trisha4   | vijay6   | false       | 2026-07-16 | 2026-07-18 | 07358480685 |
+      | 40     | trisha4   | vijay6   | false       | 2026-07-16 | 2026-07-18 | 07358480685 |
 
   Scenario: Cancel an existing booking successfully
     And a booking exists with booking id
     When the user cancels the booking
     Then the booking should be successfully cancelled
     And the booking should no longer be retrievable
+    And the response should contain an error message "Failed to fetch booking: 404"
+
 
   Scenario: Delete a booking using an invalid booking ID
     When the user attempts to delete a booking with an invalid booking ID
-    Then the deletion should fail
+    Then the deletion should fail "Failed to delete booking"

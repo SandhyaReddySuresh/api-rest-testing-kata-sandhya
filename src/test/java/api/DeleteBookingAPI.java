@@ -15,7 +15,7 @@ public class DeleteBookingAPI extends Utils {
     public static Response deleteBookingByBookingIDAPI_Call(String resourceDetails,String bookingId) throws IOException {
         String tokenValue= AdminAuthAPI.checkTokenDetails();
         requestSpec=given()
-                .pathParam("DeleteBookingID",bookingId)
+                .pathParam("BookingID",bookingId)
                 .header("Cookie", "token=" + tokenValue)
                 .spec(requestSpecification())
                 .log().all();
@@ -38,27 +38,8 @@ public class DeleteBookingAPI extends Utils {
         Assert.assertEquals(statusCodeResponse,statusCode);
 
     }
-    public static void checkSuccessMessage() throws IOException {
-        if (response != null) {
-            String successMessage = getJsonPath(response, "success");
-            Assert.assertNotNull("System should display success message", successMessage);
 
-        } else {
-            Assert.fail("Response is null. Possibly server returned error 500.");
-        }
-
-    }
-    public static void checkErrorStatus() throws IOException {
-        if (response != null) {
-            int statusCodeResponse = response.getStatusCode();
-            System.out.println("Status code: " + statusCodeResponse);
-            String ErrorMessage = getJsonPath(response, "error");
-            Assert.assertTrue("Failed to delete booking message not displayed",
-                    ErrorMessage.contains("Failed to delete booking"));
-
-        } else {
-            Assert.fail("Response is null. Possibly server returned error 500.");
-        }
-
+    public static void checkErrorStatus(String errorMessage) throws IOException {
+        checkErrorMessage(response,errorMessage);
     }
 }
