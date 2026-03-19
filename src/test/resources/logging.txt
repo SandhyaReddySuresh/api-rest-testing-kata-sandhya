@@ -15,67 +15,74 @@ Body:
     "password": "password"
 }
 HTTP/1.1 200 OK
-Date: Thu, 19 Mar 2026 05:02:33 GMT
+Date: Thu, 19 Mar 2026 07:22:21 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
 Server: cloudflare
 vary: rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch
 x-railway-edge: railway/europe-west4-drams3a
-x-railway-request-id: I0QvUysQRF-p53tPrJsmnA
+x-railway-request-id: whUaP2A7QGmdE16j21mRUA
 cf-cache-status: DYNAMIC
 Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
-Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=kyAot1lsw9oHkoSsbtWkaNhV5AYPIzZczGvU9ba3IQkkGhiPXw6jJbP6ijPVi6HXLF2stWL1gosVkJH9hIL1QynjKN2RbXfS4BlJ4IJtCaI6NAYnNEo6Yyf%2F"}]}
+Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=P6Z%2F1YiDzAmTzqgrMvcFZwsaP7Gcss7RRaqZcJvwFEE1De7oavcB7eNESiVtM%2BsC%2BVoZqRaXVHhq91FTKgE5rxI9g9%2BXieYKViJOfblzxdpT5GSxttRclbo3"}]}
 Content-Encoding: gzip
-CF-RAY: 9de9ecf0a8e1e198-CDG
+CF-RAY: 9deab9ba6effdd33-CDG
 alt-svc: h3=":443"; ma=86400
 
 {
-    "token": "3jPhKqeRuGjB8Djy"
+    "token": "1TbRkspasSOE6lJs"
 }
-Request method:	GET
-Request URI:	https://automationintesting.online/api/booking?roomid=1
+Request method:	POST
+Request URI:	https://automationintesting.online/api/booking
 Proxy:			<none>
 Request params:	<none>
-Query params:	roomid=1
+Query params:	<none>
 Form params:	<none>
 Path params:	<none>
-Headers:		Cookie=token=3jPhKqeRuGjB8Djy
+Headers:		Cookie=token=1TbRkspasSOE6lJs
 				Accept=*/*
 				Content-Type=application/json
 Cookies:		<none>
 Multiparts:		<none>
-Body:			<none>
-HTTP/1.1 200 OK
-Date: Thu, 19 Mar 2026 05:02:34 GMT
+Body:
+{
+    "roomid": "36",
+    "firstname": "trisha4",
+    "lastname": "vijay6",
+    "depositpaid": false,
+    "bookingdates": {
+        "checkin": "2026-07-16",
+        "checkout": "2026-07-18"
+    },
+    "email": "tvhw1367@testmail.com",
+    "phone": "07358480685"
+}
+HTTP/1.1 201 Created
+Date: Thu, 19 Mar 2026 07:22:22 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
 Server: cloudflare
 vary: rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch
 x-railway-edge: railway/europe-west4-drams3a
-x-railway-request-id: Asq64q9jTi2SiYwurJsmnA
+x-railway-request-id: n68H11qqTHKbPsnS21mRUA
 cf-cache-status: DYNAMIC
 Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
-Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=2VJwaTHCaNQH%2F0CXnv4D9aQ5Ufo4sTpcVQYSQ6EvHaqweklfmcrWleJongI4fGsj%2B1wvektwaxO13jiJs1gAyZjajwOt39WUjyDZTi9EVkN0rBDtu38J5JXe"}]}
-Content-Encoding: gzip
-CF-RAY: 9de9ecf6d9a20c81-CDG
+Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=kWQ83l7bw%2BEllTs12IL6mtemxpaQ8wqrWAejwbVZa5GPZ8yHIkn1lgqiJMRVy8PoyGwEpVWX9YI9dkGr2rqePHIZWBBXI5pOO2lnReiaAhyn4WrmcPHFoQba"}]}
+CF-RAY: 9deab9bfac45556d-CDG
 alt-svc: h3=":443"; ma=86400
 
 {
-    "bookings": [
-        {
-            "bookingid": 1,
-            "roomid": 1,
-            "firstname": "James",
-            "lastname": "Dean",
-            "depositpaid": true,
-            "bookingdates": {
-                "checkin": "2026-02-01",
-                "checkout": "2026-02-05"
-            }
-        }
-    ]
+    "bookingid": 5,
+    "roomid": 36,
+    "firstname": "trisha4",
+    "lastname": "vijay6",
+    "depositpaid": false,
+    "bookingdates": {
+        "checkin": "2026-07-16",
+        "checkout": "2026-07-18"
+    }
 }
 Request method:	POST
 Request URI:	https://automationintesting.online/api/auth/login
@@ -94,269 +101,64 @@ Body:
     "password": "password"
 }
 HTTP/1.1 200 OK
-Date: Thu, 19 Mar 2026 05:02:35 GMT
+Date: Thu, 19 Mar 2026 07:22:23 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
 Server: cloudflare
 vary: rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch
 x-railway-edge: railway/europe-west4-drams3a
-x-railway-request-id: DRmfSg1kS6azUJiWrJsmnA
+x-railway-request-id: wHrnHT3dRBOS8oJi21mRUA
 cf-cache-status: DYNAMIC
 Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
-Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=V%2B0mmzNJcSBIC%2F3xVhs%2B60DgYO5pKoswgN0tmLorkMcJbXN3eoMQ9iBl5P35LJ1LZbBTL%2BeNt%2BwAzKDyTSh6ZyA%2FZ3zXQ%2B1Gdlm87H2XGAiJLvnxiCD7f18l"}]}
+Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=QOdHHeD%2FHjCA1d8kTEa9MiXv3dQt%2BtNs3zHWEu36U9hNDpOaALbiBtX593470wHhBDAYr8QqctHKfSUVxar6hTca72bXokuv39g4bC5k%2Bq%2FONN7q1V98NQ%3D%3D"}]}
 Content-Encoding: gzip
-CF-RAY: 9de9ecff78cb0f1e-CDG
+CF-RAY: 9deab9c86fb93d01-CDG
 alt-svc: h3=":443"; ma=86400
 
 {
-    "token": "aU18lUQeG5jbN9mz"
+    "token": "K1emkM72SfLw07rQ"
 }
-Request method:	GET
-Request URI:	https://automationintesting.online/api/booking?roomid=2
-Proxy:			<none>
-Request params:	<none>
-Query params:	roomid=2
-Form params:	<none>
-Path params:	<none>
-Headers:		Cookie=token=aU18lUQeG5jbN9mz
-				Accept=*/*
-				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:			<none>
-HTTP/1.1 200 OK
-Date: Thu, 19 Mar 2026 05:02:35 GMT
-Content-Type: application/json
-Transfer-Encoding: chunked
-Connection: keep-alive
-Server: cloudflare
-vary: rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch
-x-railway-edge: railway/europe-west4-drams3a
-x-railway-request-id: iWmj6JepSlKnwuJ6w9P4nw
-cf-cache-status: DYNAMIC
-Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
-Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=LMiqNrjjLMBPgrrOk6m%2BDLqEWcGqWNqOP0J%2BLJXSknhqWK96XBuuBzq2Bl5RTSDSSbI%2FtqXJCM%2FCYhnCeBt7vgZfIENWK8hLrCWVud2kwCXF1TW2IqfYiCxC"}]}
-Content-Encoding: gzip
-CF-RAY: 9de9ed00489cf184-CDG
-alt-svc: h3=":443"; ma=86400
-
-{
-    "bookings": [
-        {
-            "bookingid": 2,
-            "roomid": 2,
-            "firstname": "Erica",
-            "lastname": "Bowthorpe",
-            "depositpaid": false,
-            "bookingdates": {
-                "checkin": "2026-02-02",
-                "checkout": "2026-02-04"
-            }
-        }
-    ]
-}
-Request method:	POST
-Request URI:	https://automationintesting.online/api/auth/login
+Request method:	PUT
+Request URI:	https://automationintesting.online/api/booking/5
 Proxy:			<none>
 Request params:	<none>
 Query params:	<none>
 Form params:	<none>
-Path params:	<none>
-Headers:		Accept=*/*
+Path params:	BookingID=5
+Headers:		Cookie=token=K1emkM72SfLw07rQ
+				Accept=*/*
 				Content-Type=application/json
 Cookies:		<none>
 Multiparts:		<none>
 Body:
 {
-    "username": "admin",
-    "password": "password"
+    "bookingid": 5,
+    "roomid": 36,
+    "firstname": "Lion",
+    "lastname": "Dear",
+    "depositpaid": false,
+    "bookingdates": {
+        "checkin": "2026-01-11",
+        "checkout": "2026-01-12"
+    }
 }
 HTTP/1.1 200 OK
-Date: Thu, 19 Mar 2026 05:02:35 GMT
+Date: Thu, 19 Mar 2026 07:22:23 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
 Server: cloudflare
 vary: rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch
 x-railway-edge: railway/europe-west4-drams3a
-x-railway-request-id: Md8IOlBMSAC5esN5rJsmnA
+x-railway-request-id: ih4Tm8GITfC4WQDcN8N_Fg
 cf-cache-status: DYNAMIC
 Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
-Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=P8QhFkaLvmwf6E5xmCffyhFbBbY4bK0PEoyZDFJweyJ%2FD6nhM3g%2B8K0Tfy3QfU2ztmgbFX3CYr8kDWU0PpFqiznM6lyRH1BhIw1rMdDHHjMmXZj2hsBXu3Uj"}]}
+Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=dEakQH1YN15GlCILTZ3O0X4rpIMLAHX8EXRB9CowvYHHMR2zIHAweLt8%2FDxQMrJ5HSZ%2B7Kccvs%2FUbnTpq1GWiCV0eKPdfztbJVtIpl4eED4Pt%2BTDnO0uULLy"}]}
 Content-Encoding: gzip
-CF-RAY: 9de9ed020d4f4b2c-CDG
+CF-RAY: 9deab9c97c85d0ba-CDG
 alt-svc: h3=":443"; ma=86400
 
 {
-    "token": "JW5vqCrjnqvRAISM"
-}
-Request method:	GET
-Request URI:	https://automationintesting.online/api/booking?roomid=99999
-Proxy:			<none>
-Request params:	<none>
-Query params:	roomid=99999
-Form params:	<none>
-Path params:	<none>
-Headers:		Cookie=token=JW5vqCrjnqvRAISM
-				Accept=*/*
-				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:			<none>
-HTTP/1.1 200 OK
-Date: Thu, 19 Mar 2026 05:02:35 GMT
-Content-Type: application/json
-Transfer-Encoding: chunked
-Connection: keep-alive
-Server: cloudflare
-vary: rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch
-x-railway-edge: railway/europe-west4-drams3a
-x-railway-request-id: VL6STR77Rl-DcCn3w9P4nw
-cf-cache-status: DYNAMIC
-Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
-Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=4lTfrfuMehlhThU4s6sWwNeHm9pbMQ8BS1BQo4BKfBMdPvLJEua6IFrJeCwMjPAcvpFrQd0Gf%2F7zZxgDed45UtB5oBxMbFC4FkR5ATRzbFfLgZzPs%2B%2Fc6NnA"}]}
-Content-Encoding: gzip
-CF-RAY: 9de9ed0298b1f0bb-CDG
-alt-svc: h3=":443"; ma=86400
-
-{
-    "bookings": [
-        
-    ]
-}
-Request method:	POST
-Request URI:	https://automationintesting.online/api/auth/login
-Proxy:			<none>
-Request params:	<none>
-Query params:	<none>
-Form params:	<none>
-Path params:	<none>
-Headers:		Accept=*/*
-				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:
-{
-    "username": "admin",
-    "password": "password"
-}
-HTTP/1.1 200 OK
-Date: Thu, 19 Mar 2026 05:02:36 GMT
-Content-Type: application/json
-Transfer-Encoding: chunked
-Connection: keep-alive
-Server: cloudflare
-vary: rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch
-x-railway-edge: railway/europe-west4-drams3a
-x-railway-request-id: BQsXc0WiT8ybfvzqrJsmnA
-cf-cache-status: DYNAMIC
-Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
-Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=xXDJQrDhCoPbMPQPeuyAIDONnPGyoO5X%2FuAJsmgakdFyaDgFh7Wo5%2BYaS9nar%2Bna8NadsDbJggNY%2BCksj97zKDhQAVLgg0PqxmF6KBcAHMq1gD1kkwYLWg%3D%3D"}]}
-Content-Encoding: gzip
-CF-RAY: 9de9ed050e52041a-CDG
-alt-svc: h3=":443"; ma=86400
-
-{
-    "token": "b6KE0sQ8dskkMl1K"
-}
-Request method:	GET
-Request URI:	https://automationintesting.online/api/booking?roomid=abc
-Proxy:			<none>
-Request params:	<none>
-Query params:	roomid=abc
-Form params:	<none>
-Path params:	<none>
-Headers:		Cookie=token=b6KE0sQ8dskkMl1K
-				Accept=*/*
-				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:			<none>
-HTTP/1.1 500 Internal Server Error
-Date: Thu, 19 Mar 2026 05:03:09 GMT
-Content-Type: application/json
-Transfer-Encoding: chunked
-Connection: keep-alive
-Server: cloudflare
-vary: rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch
-x-railway-edge: railway/europe-west4-drams3a
-x-railway-request-id: s1XbDWk5SM6vAKv421mRUA
-cf-cache-status: DYNAMIC
-Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
-Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=lQoxhSl7TCzOPYQXtpkpQ9l%2F9CdxCpr4ZwZSW9pEKAqplI1Qp0fQgC5YcPR0VlJpDp1iRkHB7DkaF9026mrgxmThNeieRcBMTdqWsAQyo6z4BZMHZPndLz7J"}]}
-CF-RAY: 9de9ed065cea0279-CDG
-alt-svc: h3=":443"; ma=86400
-
-[
-    
-]
-Request method:	POST
-Request URI:	https://automationintesting.online/api/auth/login
-Proxy:			<none>
-Request params:	<none>
-Query params:	<none>
-Form params:	<none>
-Path params:	<none>
-Headers:		Accept=*/*
-				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:
-{
-    "username": "admin",
-    "password": "password"
-}
-HTTP/1.1 200 OK
-Date: Thu, 19 Mar 2026 05:03:09 GMT
-Content-Type: application/json
-Transfer-Encoding: chunked
-Connection: keep-alive
-Server: cloudflare
-vary: rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch
-x-railway-edge: railway/europe-west4-drams3a
-x-railway-request-id: jLRWbrV9TkaKjM4n5nX1uw
-cf-cache-status: DYNAMIC
-Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
-Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=q1ckYZKSALbN8UTmULQgngTm5BpNgyCe3YVYyq5SvSJjULNfnMV0IqjUBAe9rKY%2Bb00cQI9mi2vKl8YhPHR03UK%2FQap2PMl%2Ba1y2Jb1qJ7kXspQRYa5YWBMH"}]}
-Content-Encoding: gzip
-CF-RAY: 9de9edd5690c9e9d-CDG
-alt-svc: h3=":443"; ma=86400
-
-{
-    "token": "QffujLzPivpgiTLf"
-}
-Request method:	GET
-Request URI:	https://automationintesting.online/api/booking?roomid=-1
-Proxy:			<none>
-Request params:	<none>
-Query params:	roomid=-1
-Form params:	<none>
-Path params:	<none>
-Headers:		Cookie=token=QffujLzPivpgiTLf
-				Accept=*/*
-				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:			<none>
-HTTP/1.1 200 OK
-Date: Thu, 19 Mar 2026 05:03:09 GMT
-Content-Type: application/json
-Transfer-Encoding: chunked
-Connection: keep-alive
-Server: cloudflare
-vary: rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch
-x-railway-edge: railway/europe-west4-drams3a
-x-railway-request-id: cYhJ0W3TTheeiu9IrJsmnA
-cf-cache-status: DYNAMIC
-Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
-Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=UOyDdrzS%2B9Odr2KB8Ha4D4EGggZRE2scpFxwNU4JMU9XUWxmUmfBaGXqrXsjMEiyRPNJr4K%2BOAfasleGJw79%2BtZ1NB4xTFD8bgkMAj%2Fegpa%2Bu1EURVwoFm%2Fj"}]}
-Content-Encoding: gzip
-CF-RAY: 9de9edd6fcb3da21-CDG
-alt-svc: h3=":443"; ma=86400
-
-{
-    "bookings": [
-        
-    ]
+    "success": true
 }

@@ -14,17 +14,18 @@ Feature: Edit hotel booking
 
   Scenario Outline: Customer successfully books a room
     When the customer submits a booking request with the following details:
-      | firstname   | lastname   | depositpaid   | checkin   | checkout   | phone   |
-      | <firstname> | <lastname> | <depositpaid> | <checkin> | <checkout> | <phone> |
+      | roomid | firstname   | lastname   | depositpaid   | checkin   | checkout   | phone       |
+      | <roomid> | <firstname> | <lastname> | <depositpaid> | <checkin> | <checkout> | <phone>   |
     Then the system confirms the booking
+    And the booking information should be accurate and complete
     And a booking ID should be returned
     And a room Id should be returned
     Examples:
-      | firstname | lastname | depositpaid | checkin    | checkout   | phone       |
-      | trisha1   | vijay1   | false       | 2026-07-16 | 2026-07-18 | 07358480685 |
+      | roomid | firstname | lastname | depositpaid | checkin    | checkout   | phone       |
+      | 36     | trisha4   | vijay6   | false       | 2026-07-16 | 2026-07-18 | 07358480685 |
 
-  Scenario : Update an existing booking
+  Scenario: Update an existing booking
     When the user updates the existing booking with the following details:
       | firstname | lastname | depositpaid | checkin    | checkout   |
       | Lion      | Dear     | false       | 2026-01-11 | 2026-01-12 |
-    Then the booking should be successfully updated with response code 200
+    Then the booking should be successfully updated

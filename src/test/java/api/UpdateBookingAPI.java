@@ -3,6 +3,7 @@ package api;
 import TestData.TestDataBuild;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
+import org.junit.Assert;
 import pojo.BookingDetails;
 import pojo.BookingResponse;
 import utils.Utils;
@@ -41,5 +42,12 @@ public class UpdateBookingAPI extends Utils {
         return response;
 
     }
+    public static void checkStatusCode(String statusCode)throws IOException
 
+    {
+        System.out.println(response.toString());
+        String statusCodeResponse= String.valueOf(response.statusCode());
+        Assert.assertEquals(statusCodeResponse,statusCode);
+
+    }
 }
