@@ -22,7 +22,7 @@ Feature: Cancel hotel booking
     And a room Id should be returned
     Examples:
       | roomid | firstname  | lastname  | depositpaid | checkin    | checkout   | phone       |
-      | 45     | DFirstName | DLastName | false       | 2026-07-16 | 2026-07-18 | 07358480685 |
+      | 604    | DFirstName | DLastName | false       | 2026-07-16 | 2026-07-18 | 07358480685 |
 
   Scenario: Cancel an existing booking successfully
     And a booking exists with booking id
