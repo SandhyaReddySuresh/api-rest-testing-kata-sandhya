@@ -110,6 +110,13 @@ public class Utils {
 
         }
     }
+    public static void checkStatusCode(Response response,String statusCode)throws IOException
 
+    {
+        System.out.println(response.toString());
+        String statusCodeResponse= String.valueOf(response.statusCode());
+        Assert.assertEquals(statusCodeResponse,statusCode);
+
+    }
 
 }

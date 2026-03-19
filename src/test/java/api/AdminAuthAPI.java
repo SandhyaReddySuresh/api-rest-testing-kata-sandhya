@@ -40,9 +40,7 @@ public class AdminAuthAPI extends Utils {
     public static void checkStatusCode(String statusCode)throws IOException
 
     {
-        System.out.println(response.toString());
-        String statusCodeResponse= String.valueOf(response.statusCode());
-        Assert.assertEquals(statusCodeResponse,statusCode);
+       checkStatusCode(response,statusCode);
 
     }
     public static String checkTokenDetails()
