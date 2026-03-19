@@ -100,6 +100,8 @@ public class GetRoomSummaryAPI extends Utils {
     {
         Utils.checkErrorMessage(response,expectedMessage);
     }
+
+
     public static void checkResponse_For_InvalidRoomId()
     {
         response.then()

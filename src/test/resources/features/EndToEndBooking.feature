@@ -85,11 +85,11 @@ Feature: End-to-End Room Booking Management
     And the booking should no longer be retrievable
     And the response should contain an error message "Failed to fetch booking: 404"
 
-#    # Step 7: Get room summary (optional)
-#    When the user asks the room booking summary for roomId
-#    Then the room booking summary response should be successful
-#    And the response should contain a list of bookings
+    # Step 7: Get room summary (optional)
+    When the user asks the room booking summary for roomId
+    Then the room booking summary response should be successful
+    And the response should contain a empty list of bookings
 
-#    # Step 8: Generate booking report
-#    When the hotel manager requests the booking report
-#    Then the system should generate the booking report
+    # Step 8: Generate booking report
+    When the hotel manager requests the booking report
+    Then the system should generate the booking report
