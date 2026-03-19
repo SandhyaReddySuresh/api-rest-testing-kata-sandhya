@@ -12,5 +12,4 @@ public class BookingDetails {
     public void setBookings(List<BookingResponse> bookings) {
         this.bookings = bookings;
     }
-
 }

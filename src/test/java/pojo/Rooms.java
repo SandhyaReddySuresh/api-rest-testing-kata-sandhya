@@ -3,10 +3,8 @@ package pojo;
 import java.util.List;
 
 public class Rooms {
-
     private int roomid;
     private String roomName;
-
     private String type;
     private boolean accessible;
     private String image;
@@ -77,9 +75,4 @@ public class Rooms {
     public void setRoomPrice(int roomPrice) {
         this.roomPrice = roomPrice;
     }
-
-
-
-
-
 }

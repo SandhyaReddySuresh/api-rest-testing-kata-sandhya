@@ -11,6 +11,7 @@ public class BookingResponse {
     public int getBookingid() {
         return bookingid;
     }
+
     public void setBookingid(int bookingid) {
         this.bookingid = bookingid;
     }
@@ -18,6 +19,7 @@ public class BookingResponse {
     public int getRoomid() {
         return roomid;
     }
+
     public void setRoomid(int roomid) {
         this.roomid = roomid;
     }
@@ -25,6 +27,7 @@ public class BookingResponse {
     public String getFirstname() {
         return firstname;
     }
+
     public void setFirstname(String firstname) {
         this.firstname = firstname;
     }
@@ -32,6 +35,7 @@ public class BookingResponse {
     public String getLastname() {
         return lastname;
     }
+
     public void setLastname(String lastname) {
         this.lastname = lastname;
     }
@@ -39,6 +43,7 @@ public class BookingResponse {
     public boolean getDepositpaid() {
         return depositpaid;
     }
+
     public void setDepositpaid(boolean depositpaid) {
         this.depositpaid = depositpaid;
     }
@@ -46,6 +51,7 @@ public class BookingResponse {
     public BookingDates getBookingdates() {
         return bookingdates;
     }
+
     public void setBookingdates(BookingDates bookingdates) {
         this.bookingdates = bookingdates;
     }

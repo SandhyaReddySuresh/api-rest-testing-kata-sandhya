@@ -13,8 +13,8 @@ public class ConfigReader {
                 .from(environmentVariables)
                 .getProperty(key);
     }
+
     public static int getIntProperty(String key) {
         return Integer.parseInt(getProperty(key));
     }
-
 }

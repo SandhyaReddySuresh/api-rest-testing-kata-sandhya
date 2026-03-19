@@ -1,7 +1,6 @@
 package pojo;
 
 public class BookingDates {
-
     private Object checkin;
     private Object checkout;
 
@@ -20,6 +19,4 @@ public class BookingDates {
     public void setCheckout(Object checkout) {
         this.checkout = checkout;
     }
-
-
 }

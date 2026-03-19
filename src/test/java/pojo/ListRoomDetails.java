@@ -12,8 +12,4 @@ public class ListRoomDetails {
     public void setRooms(List<Rooms> rooms) {
         this.rooms = rooms;
     }
-
-
-
-
 }

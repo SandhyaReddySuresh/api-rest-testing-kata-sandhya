@@ -64,7 +64,4 @@ public class CreateBooking {
     public void setPhone(Object phone) {
         this.phone = phone;
     }
-
-
-
 }

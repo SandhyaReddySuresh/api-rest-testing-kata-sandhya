@@ -11,8 +11,6 @@ public enum APIResources {
     GetReportSummary("/api/report"),
     UpdateBookingDetails("/api/booking/{BookingID}");
 
-
-
     private String resourceAPI;
 
     APIResources(String resource) {

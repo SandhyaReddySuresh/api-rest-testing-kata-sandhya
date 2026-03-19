@@ -28,5 +28,4 @@ public class Report {
     public void setTitle(String title) {
         this.title = title;
     }
-
 }

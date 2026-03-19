@@ -1,13 +1,11 @@
 package stepDefinitions;
 
 import api.CheckAvailabilityAPI;
-import api.ListOfRoomsAPI;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import utils.APIResources;
-
 import java.io.IOException;
 import java.util.List;
 
@@ -45,6 +43,4 @@ public class CheckAvailabilitySteps {
     public void roomAvailabilityInformationIsReturnedInAFormatCompliantWithTheJSONSchema() {
         CheckAvailabilityAPI.checkSchemaValidation();
     }
-
-
 }

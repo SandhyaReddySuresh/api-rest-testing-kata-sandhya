@@ -4,7 +4,6 @@ import java.util.List;
 
 public class GetRoomIdDetails {
     private int roomid;
-
     private String roomName;
     private String type;
     private Boolean accessible;
@@ -77,6 +76,4 @@ public class GetRoomIdDetails {
     public void setRoomPrice(int roomPrice) {
         this.roomPrice = roomPrice;
     }
-
-
 }

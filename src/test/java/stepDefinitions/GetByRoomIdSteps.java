@@ -20,25 +20,25 @@ public class GetByRoomIdSteps {
 
     @Given("I want to check a room")
     public void iWantToCheckARoom() {
-        roomIdFromListOfRoom=ListOfRoomsAPI.roomId;
+        roomIdFromListOfRoom = ListOfRoomsAPI.roomId;
     }
 
     @When("I ask the system for the details of the room")
     public void iAskTheSystemForTheDetailsOfTheRoom() throws IOException {
-        roomIdFromListOfRoom=ListOfRoomsAPI.roomId;
-        String resourceDetails="GetByRoomId";
-        APIResources resourcesAPI=APIResources.valueOf(resourceDetails);
-        GetByRoomIdAPI.getByRoomIdAPI_Call(resourcesAPI.getResources(),roomIdFromListOfRoom);
+        roomIdFromListOfRoom = ListOfRoomsAPI.roomId;
+        String resourceDetails = "GetByRoomId";
+        APIResources resourcesAPI = APIResources.valueOf(resourceDetails);
+        GetByRoomIdAPI.getByRoomIdAPI_Call(resourcesAPI.getResources(), roomIdFromListOfRoom);
     }
 
     @Then("I should get the correct information about the room:")
     public void iShouldGetTheCorrectInformationAboutTheRoom(DataTable dataTable) throws IOException {
         List<Map<String, String>> rows = dataTable.asMaps(String.class, String.class);
 
-        int statusCode= ConfigReader.getIntProperty("SuccessStatusCode");
+        int statusCode = ConfigReader.getIntProperty("SuccessStatusCode");
         GetByRoomIdAPI.checkStatusCode(String.valueOf(statusCode));
         GetByRoomIdAPI.verifyRoomsDetailsPresentInResponse();
-        GetByRoomIdAPI.validateRoomsDetailsFromResponse(rows,roomIdFromListOfRoom);
+        GetByRoomIdAPI.validateRoomsDetailsFromResponse(rows, roomIdFromListOfRoom);
 
     }
 
@@ -47,6 +47,7 @@ public class GetByRoomIdSteps {
         List<String> expectedFields = dataTable.asList();
         GetByRoomIdAPI.verifyRoomFeaturesDetails_FromResponse(expectedFields);
     }
+
     @And("the room should have a description explaining it")
     public void theRoomShouldHaveADescriptionExplainingIt() {
         GetByRoomIdAPI.verifyRoomDescriptionDetails_FromResponse();
@@ -59,14 +60,14 @@ public class GetByRoomIdSteps {
 
     @When("the user requests room details with room ID {string}")
     public void the_user_requests_room_details_with_room_id(String roomId) throws IOException {
-        String resourceDetails="GetByRoomId";
-        APIResources resourcesAPI=APIResources.valueOf(resourceDetails);
-        GetByRoomIdAPI.getByRoomIdAPIInvalidAPI_Call(resourcesAPI.getResources(),roomId);
+        String resourceDetails = "GetByRoomId";
+        APIResources resourcesAPI = APIResources.valueOf(resourceDetails);
+        GetByRoomIdAPI.getByRoomIdAPIInvalidAPI_Call(resourcesAPI.getResources(), roomId);
     }
 
     @Then("the API should return an error")
     public void theAPIShouldReturnAnError() {
-       GetByRoomIdAPI.checkInvalidStatusCode();
+        GetByRoomIdAPI.checkInvalidStatusCode();
     }
 
     @And("the error message should be {string}")
@@ -78,6 +79,4 @@ public class GetByRoomIdSteps {
     public void theResponseBodyShouldMatchTheExpectedJSONSchema() {
         GetByRoomIdAPI.checkSchemaValidation();
     }
-
-
 }
