@@ -51,4 +51,6 @@ public class BookingDetailsByRoomIdSteps {
     public void theResponseShouldMatchTheBookingJSONSchema() {
         BookingDetailsByRoomIdAPI.checkSchemaValidation();
     }
+
+
 }

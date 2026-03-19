@@ -22,3 +22,9 @@ Feature: Edit hotel booking
     Examples:
       | firstname | lastname | depositpaid | checkin    | checkout   | phone       |
       | trisha1   | vijay1   | false       | 2026-07-16 | 2026-07-18 | 07358480685 |
+
+  Scenario : Update an existing booking
+    When the user updates the existing booking with the following details:
+      | firstname | lastname | depositpaid | checkin    | checkout   |
+      | Lion      | Dear     | false       | 2026-01-11 | 2026-01-12 |
+    Then the booking should be successfully updated with response code 200
