@@ -12,22 +12,22 @@ Feature: View room booking details
     Then the login should be successful
     And the users should receive an authentication token
 
-#  Scenario Outline: View booking details for a room
-#    When the customer selects room "<roomid>" to view booking details
-#    Then the booking details should be displayed successfully
-#    And the booking should include:
-#      | bookingid     |
-#      | roomid        |
-#      | firstname     |
-#      | lastname      |
-#      | depositpaid   |
-#      | bookingdates  |
-#
-#    Examples:
-#      | roomid |
-#      | 1      |
-#      | 2      |
-#
+  Scenario Outline: View booking details for a room
+    When the customer selects room "<roomid>" to view booking details
+    Then the booking details should be displayed successfully
+    And the booking should include:
+      | bookingid     |
+      | roomid        |
+      | firstname     |
+      | lastname      |
+      | depositpaid   |
+      | bookingdates  |
+    And the response should match the booking JSON schema
+    Examples:
+      | roomid |
+      | 1      |
+      | 2      |
+
 
   Scenario Outline: Invalid room selection
     When the customer selects an invalid room "<roomid>" to check booking details

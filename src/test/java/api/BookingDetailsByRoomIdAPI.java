@@ -99,4 +99,15 @@ public class BookingDetailsByRoomIdAPI extends Utils {
                 .body("bookings.size()", equalTo(0));
         Assert.fail("the system should inform the customer that the selected room is invalid");
     }
+    public static void checkSchemaValidation()
+    {
+        try {
+            validateJsonSchema(response, "schema/bookingByRoomId-schema.json");
+        }
+        catch (AssertionError e)
+        {
+            Assert.fail("Schema validation correctly failed: " + e.getMessage());
+
+        }
+    }
 }

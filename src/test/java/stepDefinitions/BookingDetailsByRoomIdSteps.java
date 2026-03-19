@@ -46,4 +46,9 @@ public class BookingDetailsByRoomIdSteps {
         BookingDetailsByRoomIdAPI.validateInvalidResponse();
 
     }
+
+    @And("the response should match the booking JSON schema")
+    public void theResponseShouldMatchTheBookingJSONSchema() {
+        BookingDetailsByRoomIdAPI.checkSchemaValidation();
+    }
 }
