@@ -62,7 +62,7 @@ Feature: End-to-End Room Booking Management
     # Step 3: Create a new booking
     When the customer submits a booking request with the following details:
       | roomid | firstname  | lastname  | depositpaid | checkin    | checkout   | phone       |
-      | 43     | CFirstName | CLastName | false       | 2026-07-16 | 2026-07-18 | 07358480685 |
+      | 614    | CFirstName | CLastName | false       | 2026-07-16 | 2026-07-18 | 07358480685 |
     Then the system confirms the booking
     And the booking information should be accurate and complete
     And a booking ID should be returned
