@@ -79,6 +79,13 @@ public class CreateBookingAPI extends Utils {
         return bookingID;
     }
 
+    public static int returnRoomId()
+    {
+        Assert.assertNotNull("Validate RoomId is returned successfully", roomId);
+
+        return roomId;
+    }
+
     public static void checkInvalidStatusCode()
     {
         Utils.checkInvalidStatusCode(response);

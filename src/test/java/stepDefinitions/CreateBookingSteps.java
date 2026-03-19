@@ -63,4 +63,9 @@ public class CreateBookingSteps {
     }
 
 
+    @And("a room Id should be returned")
+    public void aRoomIdShouldBeReturned() {
+        CreateBookingAPI.returnRoomId();
+
+    }
 }
