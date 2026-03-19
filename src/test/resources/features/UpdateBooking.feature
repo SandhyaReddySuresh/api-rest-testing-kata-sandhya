@@ -1,3 +1,4 @@
+@HotelBooking-Regression
 @UpdateBooking
 Feature: Edit hotel booking
   As a registered user

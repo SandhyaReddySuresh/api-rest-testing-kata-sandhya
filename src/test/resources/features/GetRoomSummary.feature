@@ -1,3 +1,4 @@
+@HotelBooking-Regression
 @RoomSummary
 Feature: Room Booking Summary
 

@@ -1,3 +1,4 @@
+@HotelBooking-Regression
 @GetByRoomId
 Feature: View Room Details
   As a guest or customer

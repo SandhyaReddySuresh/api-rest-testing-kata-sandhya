@@ -1,3 +1,4 @@
+@HotelBooking-Regression
 @DeleteBooking
 Feature: Cancel hotel booking
   As a guest

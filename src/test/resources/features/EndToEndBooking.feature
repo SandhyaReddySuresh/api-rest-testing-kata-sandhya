@@ -1,3 +1,4 @@
+@HotelBooking-Regression
 @EndToEndBooking
 Feature: End-to-End Room Booking Management
 

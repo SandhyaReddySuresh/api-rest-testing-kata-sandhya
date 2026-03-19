@@ -1,3 +1,4 @@
+@HotelBooking-Regression
 @ListOfRoomsDetails
 Feature: Fetch all rooms
   As a user

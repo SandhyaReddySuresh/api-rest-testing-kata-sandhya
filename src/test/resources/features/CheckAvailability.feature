@@ -1,3 +1,4 @@
+@HotelBooking-Regression
 @CheckAvailabilityAPI
 Feature: Room Availability API
   As a hotel booking system user

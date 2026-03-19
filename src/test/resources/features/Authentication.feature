@@ -1,3 +1,4 @@
+@HotelBooking-Regression
 @Login
 Feature: Hotel booking login
    Login to Hotel Booking System
