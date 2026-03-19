@@ -7,6 +7,11 @@ Feature: View Room Details
 
   Background:
     Given the booking system is operational
+    When the admin enters the correct username and password
+      | username | password |
+      | admin    | password |
+    Then the login should be successful
+    And the users should receive an authentication token
 
   Scenario: Retrieve the list of all rooms successfully
     When the user sends a GET request to fetch rooms from the system

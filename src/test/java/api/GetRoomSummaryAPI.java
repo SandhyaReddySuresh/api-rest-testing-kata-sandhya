@@ -42,10 +42,7 @@ public class GetRoomSummaryAPI extends Utils {
     }
 
     public static void checkStatusCode(String statusCode) throws IOException {
-        System.out.println(response.toString());
-        String statusCodeResponse = String.valueOf(response.statusCode());
-        Assert.assertEquals("Success status response", statusCodeResponse, statusCode);
-
+        checkStatusCode(response,statusCode);
     }
 
     public static void getBookingDetailsByRoomIDAPI_Response() {
