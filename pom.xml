@@ -84,6 +84,8 @@
 
     <build>
         <plugins>
+
+            <!-- Compiler plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -96,11 +98,13 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.5.5</version>
                 <configuration>
+                    <includes>
+                        <include>**/*Test.java</include>
+                    </includes>
                     <skipTests>false</skipTests>
                     <rerunFailingTestsCount>0</rerunFailingTestsCount>
                     <testFailureIgnore>true</testFailureIgnore>
                 </configuration>
-
             </plugin>
 
             <!-- Failsafe for integration tests -->
@@ -110,7 +114,7 @@
                 <version>3.5.5</version>
                 <configuration>
                     <includes>
-                        <include>**/*Test.java</include>
+                        <include>**/*IT.java</include>
                     </includes>
                     <rerunFailingTestsCount>0</rerunFailingTestsCount>
                 </configuration>
@@ -124,6 +128,7 @@
                 </executions>
             </plugin>
 
+            <!-- Serenity plugin -->
             <plugin>
                 <groupId>net.serenity-bdd.maven.plugins</groupId>
                 <artifactId>serenity-maven-plugin</artifactId>
@@ -131,13 +136,14 @@
                 <executions>
                     <execution>
                         <id>serenity-reports</id>
-                        <phase>post-integration-test</phase>
+                        <phase>verify</phase> <!-- important -->
                         <goals>
                             <goal>aggregate</goal>
                         </goals>
                     </execution>
                 </executions>
             </plugin>
+
         </plugins>
     </build>
 
