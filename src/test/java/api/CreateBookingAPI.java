@@ -8,33 +8,25 @@ import org.junit.Assert;
 import pojo.BookingResponse;
 import pojo.CreateBooking;
 import utils.Utils;
-
 import java.io.IOException;
-
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.CoreMatchers.allOf;
-import static org.hamcrest.CoreMatchers.equalTo;
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.greaterThanOrEqualTo;
-import static org.hamcrest.Matchers.lessThan;
 
 public class CreateBookingAPI extends Utils {
     public static RequestSpecification requestSpec;
     public static ResponseSpecification responseSpec;
-
     public static Response response;
     static CreateBooking bookingPayload;
-
     public static int bookingID;
     public static int roomId;
-    static TestDataBuild testData=new TestDataBuild();
-    public static Response postCreateBooking(String resourceDetails,String roomid,String firstname, String lastname, boolean depositpaid, String checkin, String checkout, String phone) throws IOException {
-        String tokenValue= AdminAuthAPI.checkTokenDetails();
+    static TestDataBuild testData = new TestDataBuild();
 
-        bookingPayload = testData.createBookingPayLoad(roomid,firstname,lastname,depositpaid,checkin,checkout,phone);
+    public static Response postCreateBooking(String resourceDetails, String roomid, String firstname, String lastname, boolean depositpaid, String checkin, String checkout, String phone) throws IOException {
+        String tokenValue = AdminAuthAPI.checkTokenDetails();
 
-        requestSpec=given()
-               .header("Cookie", "token=" + tokenValue)
+        bookingPayload = testData.createBookingPayLoad(roomid, firstname, lastname, depositpaid, checkin, checkout, phone);
+
+        requestSpec = given()
+                .header("Cookie", "token=" + tokenValue)
                 .spec(requestSpecification())
                 .body(bookingPayload).log().all();
 
@@ -45,61 +37,49 @@ public class CreateBookingAPI extends Utils {
                 .spec(responseSpecification())
                 .log().all()
                 .extract().response();
+
         return response;
-
     }
-    public static void checkStatusCode(String statusCode)throws IOException
 
-    {
-        checkStatusCode(response,statusCode);
+    public static void checkStatusCode(String statusCode) throws IOException {
+        checkStatusCode(response, statusCode);
     }
-    public static void checkBookingDetails()
-    {
-        BookingResponse bookingResponse=response.as(BookingResponse.class);
-        System.out.println(bookingResponse.getBookingid());
 
-        bookingID=bookingResponse.getBookingid();
-        roomId=bookingResponse.getRoomid();
+    public static void checkBookingDetails() {
+        BookingResponse bookingResponse = response.as(BookingResponse.class);
+        bookingID = bookingResponse.getBookingid();
+        roomId = bookingResponse.getRoomid();
         Assert.assertNotNull("Validate RoomID", bookingResponse.getRoomid());
-        Assert.assertEquals("System should display FirstName",bookingPayload.getFirstname(), bookingResponse.getFirstname());
-        Assert.assertEquals("System should display LastName",bookingPayload.getLastname(), bookingResponse.getLastname());
-        Assert.assertEquals("System should display DepositPaid",bookingPayload.getDepositpaid(), bookingResponse.getDepositpaid());
-        Assert.assertEquals("System should display Check in from BookingDates",bookingPayload.getBookingdates().getCheckin(), bookingResponse.getBookingdates().getCheckin());
-        Assert.assertEquals("System should display Check out from BookingDates",bookingPayload.getBookingdates().getCheckout(), bookingResponse.getBookingdates().getCheckout());
-
-
+        Assert.assertEquals("System should display FirstName", bookingPayload.getFirstname(), bookingResponse.getFirstname());
+        Assert.assertEquals("System should display LastName", bookingPayload.getLastname(), bookingResponse.getLastname());
+        Assert.assertEquals("System should display DepositPaid", bookingPayload.getDepositpaid(), bookingResponse.getDepositpaid());
+        Assert.assertEquals("System should display Check in from BookingDates", bookingPayload.getBookingdates().getCheckin(), bookingResponse.getBookingdates().getCheckin());
+        Assert.assertEquals("System should display Check out from BookingDates", bookingPayload.getBookingdates().getCheckout(), bookingResponse.getBookingdates().getCheckout());
     }
-    public static int returnBookingId()
-    {
-        Assert.assertNotNull("Validate BookingID is returned successfully", bookingID);
 
+    public static int returnBookingId() {
+        Assert.assertNotNull("Validate BookingID is returned successfully", bookingID);
         return bookingID;
     }
 
-    public static int returnRoomId()
-    {
+    public static int returnRoomId() {
         Assert.assertNotNull("Validate RoomId is returned successfully", roomId);
-
         return roomId;
     }
 
-    public static void checkInvalidStatusCode()
-    {
+    public static void checkInvalidStatusCode() {
         Utils.checkInvalidStatusCode(response);
     }
-    public static void checkErrorMessage(String expectedMessage)
-    {
-      Utils.checkErrorMessage(response,expectedMessage);
+
+    public static void checkErrorMessage(String expectedMessage) {
+        Utils.checkErrorMessage(response, expectedMessage);
     }
-    public static void checkSchemaValidation(String schemaJson)
-    {
+
+    public static void checkSchemaValidation(String schemaJson) {
         try {
             validateJsonSchema(response, "schema/" + schemaJson);
-        }
-        catch (AssertionError e)
-        {
+        } catch (AssertionError e) {
             Assert.fail("Schema validation correctly failed: " + e.getMessage());
-
         }
     }
 }

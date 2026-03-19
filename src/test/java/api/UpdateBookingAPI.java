@@ -4,7 +4,6 @@ import TestData.TestDataBuild;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import org.junit.Assert;
-import pojo.BookingDetails;
 import pojo.BookingResponse;
 import utils.Utils;
 
@@ -13,21 +12,19 @@ import java.io.IOException;
 import static io.restassured.RestAssured.given;
 
 public class UpdateBookingAPI extends Utils {
-
     public static RequestSpecification requestSpec;
-
     public static Response response;
-   public  static BookingResponse bookingPayload;
-    static TestDataBuild testData=new TestDataBuild();
+    public static BookingResponse bookingPayload;
+    static TestDataBuild testData = new TestDataBuild();
 
-    public static Response putBookingAPI(String resourceDetails, String firstname,String lastname,boolean depositPaid,String checkIn,String checkOut) throws IOException {
-        String tokenValue= AdminAuthAPI.checkTokenDetails();
-        int updateBookingId= CreateBookingAPI.bookingID;
-        int updateRoomId= CreateBookingAPI.roomId;
-        bookingPayload = testData.updateBookingDetailsPayload(updateBookingId,updateRoomId,firstname,lastname,depositPaid,checkIn,checkOut);
+    public static Response putBookingAPI(String resourceDetails, String firstname, String lastname, boolean depositPaid, String checkIn, String checkOut) throws IOException {
+        String tokenValue = AdminAuthAPI.checkTokenDetails();
+        int updateBookingId = CreateBookingAPI.bookingID;
+        int updateRoomId = CreateBookingAPI.roomId;
+        bookingPayload = testData.updateBookingDetailsPayload(updateBookingId, updateRoomId, firstname, lastname, depositPaid, checkIn, checkOut);
 
         requestSpec = given()
-                .pathParam("BookingID",updateBookingId)
+                .pathParam("BookingID", updateBookingId)
                 .header("Cookie", "token=" + tokenValue)
                 .spec(requestSpecification())
                 .body(bookingPayload).log().all();
@@ -39,27 +36,21 @@ public class UpdateBookingAPI extends Utils {
                 .spec(responseSpecification())
                 .log().all()
                 .extract().response();
+
         return response;
-
     }
-    public static void checkStatusCode(String statusCode)throws IOException
 
-    {
+    public static void checkStatusCode(String statusCode) throws IOException {
         System.out.println(response.toString());
-        String statusCodeResponse= String.valueOf(response.statusCode());
-        Assert.assertEquals(statusCodeResponse,statusCode);
-
+        String statusCodeResponse = String.valueOf(response.statusCode());
+        Assert.assertEquals(statusCodeResponse, statusCode);
     }
 
-
-    public static void checkUpdateDetails_InResponse()
-    {
-
+    public static void checkUpdateDetails_InResponse() {
         Assert.assertEquals("Booking ID from the details does not match the created booking ID",
                 BookingDetailsByRoomIdAPI.bookingId, CreateBookingAPI.bookingID);
 
         Assert.assertEquals("Room ID from the details does not match the created booking's room ID",
                 BookingDetailsByRoomIdAPI.roomId, CreateBookingAPI.roomId);
     }
-
 }

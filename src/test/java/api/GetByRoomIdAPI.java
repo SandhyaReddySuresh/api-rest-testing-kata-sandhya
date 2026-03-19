@@ -5,13 +5,10 @@ import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
 import org.junit.Assert;
 import pojo.GetRoomIdDetails;
-import pojo.Rooms;
 import utils.Utils;
-
 import java.io.IOException;
 import java.util.List;
 import java.util.Map;
-
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.CoreMatchers.allOf;
 import static org.hamcrest.CoreMatchers.equalTo;
@@ -22,16 +19,15 @@ import static org.hamcrest.Matchers.lessThan;
 public class GetByRoomIdAPI extends Utils {
 
     public static RequestSpecification requestSpec;
-    public static ResponseSpecification responseSpec;
     public static Response response;
     public static GetRoomIdDetails roomDetails;
 
-    public static Response getByRoomIdAPI_Call(String resourceDetails,int roomId) throws IOException {
+    public static Response getByRoomIdAPI_Call(String resourceDetails, int roomId) throws IOException {
 
-        String tokenValue= AdminAuthAPI.checkTokenDetails();
+        String tokenValue = AdminAuthAPI.checkTokenDetails();
 
-        requestSpec=given()
-                .pathParam("roomId",roomId)
+        requestSpec = given()
+                .pathParam("roomId", roomId)
                 .header("Cookie", "token=" + tokenValue)
                 .spec(requestSpecification())
                 .log().all();
@@ -43,34 +39,31 @@ public class GetByRoomIdAPI extends Utils {
                 .spec(responseSpecification())
                 .log().all()
                 .extract().response();
+
         return response;
-
     }
 
-    public static void checkStatusCode(String statusCode)throws IOException
-
-    {
+    public static void checkStatusCode(String statusCode) throws IOException {
         System.out.println(response.toString());
-        String statusCodeResponse= String.valueOf(response.statusCode());
-        Assert.assertEquals("Success status response",statusCodeResponse,statusCode);
-
+        String statusCodeResponse = String.valueOf(response.statusCode());
+        Assert.assertEquals("Success status response", statusCodeResponse, statusCode);
     }
-    public static void checkInvalidStatusCode()
-    {
+
+    public static void checkInvalidStatusCode() {
         assertThat("Status code should be 4xx",
                 response.getStatusCode(), allOf(greaterThanOrEqualTo(400), lessThan(500)));
     }
-    public static void checkErrorMessage(String expectedMessage)
-    {
+
+    public static void checkErrorMessage(String expectedMessage) {
         String actualMessage = response.jsonPath().getString("error");
         assertThat("Error message mismatch", actualMessage, equalTo(expectedMessage));
     }
-    public static void verifyRoomsDetailsPresentInResponse()
-    {
-        roomDetails=response.as(GetRoomIdDetails.class);
-        Assert.assertNotNull("the system should present the room’s full details",roomDetails);
 
+    public static void verifyRoomsDetailsPresentInResponse() {
+        roomDetails = response.as(GetRoomIdDetails.class);
+        Assert.assertNotNull("the system should present the room’s full details", roomDetails);
     }
+
     public static void validateRoomsDetailsFromResponse(List<Map<String, String>> expectedFields, int expectedRoomID) {
         // Validate room ID first
         Assert.assertEquals("Validate expected room id", expectedRoomID, roomDetails.getRoomid());
@@ -132,40 +125,37 @@ public class GetByRoomIdAPI extends Utils {
         }
     }
 
-    public static void verifyRoomFeaturesDetails_FromResponse(List<String> expectedFields ) {
-        List<String> features =roomDetails.getFeatures();
+    public static void verifyRoomFeaturesDetails_FromResponse(List<String> expectedFields) {
+        List<String> features = roomDetails.getFeatures();
         Assert.assertNotNull("Feature should not be null", roomDetails.getFeatures());
 
         for (String field : expectedFields) {
-                switch (field) {
-                    case "Radio":
-                        Assert.assertTrue("Feature TV should be present", features.contains("Radio"));
-                        break;
-                    case "WiFi":
-                        Assert.assertTrue("Feature WiFi should be present", features.contains("WiFi"));
-                        break;
-                    case "Safe":
-                        Assert.assertTrue("Feature Safe should be present", features.contains("Safe"));
-                        break;
-                }
+            switch (field) {
+                case "Radio":
+                    Assert.assertTrue("Feature TV should be present", features.contains("Radio"));
+                    break;
+                case "WiFi":
+                    Assert.assertTrue("Feature WiFi should be present", features.contains("WiFi"));
+                    break;
+                case "Safe":
+                    Assert.assertTrue("Feature Safe should be present", features.contains("Safe"));
+                    break;
             }
         }
+    }
 
     public static void verifyRoomDescriptionDetails_FromResponse() {
         Assert.assertNotNull("Description should not be null", roomDetails.getDescription());
-
     }
 
     public static void verifyRoomImageDetails_FromResponse() {
         Assert.assertNotNull("Image should not be null", roomDetails.getImage());
-
     }
 
-    public static Response getByRoomIdAPIInvalidAPI_Call(String resourceDetails,String roomId) throws IOException {
+    public static Response getByRoomIdAPIInvalidAPI_Call(String resourceDetails, String roomId) throws IOException {
 
-
-        requestSpec=given()
-                .pathParam("roomId",roomId)
+        requestSpec = given()
+                .pathParam("roomId", roomId)
                 .spec(requestSpecification())
                 .log().all();
 
@@ -176,20 +166,16 @@ public class GetByRoomIdAPI extends Utils {
                 .spec(responseSpecification())
                 .log().all()
                 .extract().response();
-        return response;
 
+        return response;
     }
-    public static void checkSchemaValidation()
-    {
+
+    public static void checkSchemaValidation() {
         try {
             validateJsonSchema(response, "schema/getByRoomId-schema.json");
-        }
-        catch (AssertionError e)
-        {
+        } catch (AssertionError e) {
             Assert.fail("Schema validation correctly failed: " + e.getMessage());
 
         }
     }
-    }
-
-
+}

@@ -13,20 +13,16 @@ import java.util.List;
 import static io.restassured.RestAssured.given;
 
 public class CheckAvailabilityAPI extends Utils {
-
     public static RequestSpecification requestSpec;
-
     public static Response response;
     public static ListRoomDetails roomListDetails;
 
-
-    public static Response getCheckAvailabilityAPI_Call(String resourceDetails,String CheckIn, String CheckOut) throws IOException {
-
+    public static Response getCheckAvailabilityAPI_Call(String resourceDetails, String CheckIn, String CheckOut) throws IOException {
         String tokenValue = AdminAuthAPI.checkTokenDetails();
 
-        requestSpec=given()
-                .queryParam("checkin",CheckIn)
-                .queryParam("CheckOut",CheckOut)
+        requestSpec = given()
+                .queryParam("checkin", CheckIn)
+                .queryParam("CheckOut", CheckOut)
                 .header("Cookie", "token=" + tokenValue)
                 .spec(requestSpecification())
                 .log().all();
@@ -38,21 +34,20 @@ public class CheckAvailabilityAPI extends Utils {
                 .spec(responseSpecification())
                 .log().all()
                 .extract().response();
+
         return response;
-
     }
-    public static void checkStatusCode(String statusCode)throws IOException
 
-    {
-        checkStatusCode(response,statusCode);
+    public static void checkStatusCode(String statusCode) throws IOException {
+        checkStatusCode(response, statusCode);
     }
+
     public static void verifyRoomsListResponse() {
         roomListDetails = response.as(ListRoomDetails.class);
         Assert.assertNotNull("The system should display a list of rooms in response", roomListDetails.getRooms());
-
     }
-    public static void verifyEachRoomsDetails_FromResponse(List<String> expectedFields ) {
 
+    public static void verifyEachRoomsDetails_FromResponse(List<String> expectedFields) {
         Assert.assertNotNull("The system should return a list of rooms", roomListDetails.getRooms());
         Assert.assertFalse("Rooms list should not be empty", roomListDetails.getRooms().isEmpty());
 
@@ -90,7 +85,6 @@ public class CheckAvailabilityAPI extends Utils {
 
     public static void checkErrorMessage(String ExpectedErrorMessage) {
         String actualErrorMessage = getJsonPath(response, "error");
-
         if (actualErrorMessage == null || actualErrorMessage.equals("[]") || actualErrorMessage.trim().isEmpty()) {
             actualErrorMessage = null;
         }
@@ -107,15 +101,11 @@ public class CheckAvailabilityAPI extends Utils {
         );
     }
 
-    public static void checkSchemaValidation()
-    {
+    public static void checkSchemaValidation() {
         try {
             validateJsonSchema(response, "schema/checkAvailability-schema.json");
-        }
-        catch (AssertionError e)
-        {
+        } catch (AssertionError e) {
             Assert.fail("Schema validation correctly failed: " + e.getMessage());
-
         }
     }
 }

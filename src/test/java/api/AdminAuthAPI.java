@@ -2,29 +2,22 @@ package api;
 
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
-import io.restassured.specification.ResponseSpecification;
 import org.junit.Assert;
 import payloadDetails.AdminAuthPayload;
 import utils.Utils;
-import static io.restassured.RestAssured.*;
 
 import java.io.IOException;
 
 import static io.restassured.RestAssured.given;
-import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 
 public class AdminAuthAPI extends Utils {
     public static RequestSpecification requestSpec;
-    public static ResponseSpecification responseSpec;
-
-    public static  Response response;
+    public static Response response;
     public static String tokenValueFromResponse;
 
     public static Response postAuthAdmin(String resourceDetails, String userName, String Password) throws IOException {
-
-
-        requestSpec=given().spec(requestSpecification())
-                .body(AdminAuthPayload.adminAuthPayload(userName,Password)).log().all();
+        requestSpec = given().spec(requestSpecification())
+                .body(AdminAuthPayload.adminAuthPayload(userName, Password)).log().all();
 
         response = requestSpec
                 .when()
@@ -37,33 +30,26 @@ public class AdminAuthAPI extends Utils {
 
     }
 
-    public static void checkStatusCode(String statusCode)throws IOException
-
-    {
-       checkStatusCode(response,statusCode);
+    public static void checkStatusCode(String statusCode) throws IOException {
+        checkStatusCode(response, statusCode);
 
     }
-    public static String checkTokenDetails()
-    {
-        tokenValueFromResponse=getJsonPath(response,"token");
+
+    public static String checkTokenDetails() {
+        tokenValueFromResponse = getJsonPath(response, "token");
         return tokenValueFromResponse;
     }
-    public static void checkErrorMessage_ForUnUnauthorizedUser()
-    {
-        String errorMessage=getJsonPath(response,"error");
-        Assert.assertNotNull("Failed to authenticate",errorMessage);
+
+    public static void checkErrorMessage_ForUnUnauthorizedUser() {
+        String errorMessage = getJsonPath(response, "error");
+        Assert.assertNotNull("Failed to authenticate", errorMessage);
     }
 
-      public static void checkSchemaValidation()
-      {
+    public static void checkSchemaValidation() {
         try {
             validateJsonSchema(response, "schema/login-schema.json");
-        }
-        catch (AssertionError e)
-        {
+        } catch (AssertionError e) {
             Assert.fail("Schema validation correctly failed: " + e.getMessage());
-
         }
-        }
-      }
-
+    }
+}
