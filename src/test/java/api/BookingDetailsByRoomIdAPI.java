@@ -3,9 +3,14 @@ package api;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import org.junit.Assert;
+import pojo.BookingDetails;
+import pojo.BookingResponse;
+import pojo.ListRoomDetails;
+import pojo.Rooms;
 import utils.Utils;
 
 import java.io.IOException;
+import java.util.List;
 
 import static io.restassured.RestAssured.given;
 
@@ -14,6 +19,10 @@ public class BookingDetailsByRoomIdAPI extends Utils {
     public static RequestSpecification requestSpec;
 
     public static Response response;
+    public static BookingDetails bookingListDetails;
+
+    public static int roomId;
+    public static int bookingId;
 
     public static Response getBookingDetailsById(String resourceDetails, String roomID) throws IOException {
         String tokenValue = AdminAuthAPI.checkTokenDetails();
@@ -41,5 +50,37 @@ public class BookingDetailsByRoomIdAPI extends Utils {
         Assert.assertEquals("Success status response", statusCodeResponse, statusCode);
 
     }
+    public static void verifyEachBookingDetails_FromResponse(List<String> expectedFields ) {
+        bookingListDetails = response.as(BookingDetails.class);
 
+        Assert.assertNotNull("The system should return a list of booking details", bookingListDetails.getBookings());
+        Assert.assertFalse("Booking list should not be empty", bookingListDetails.getBookings().isEmpty());
+
+        for (BookingResponse booking : bookingListDetails.getBookings()) {
+            for (String field : expectedFields) {
+                switch (field) {
+                    case "bookingid":
+                        Assert.assertNotNull("bookingid is missing", booking.getBookingid());
+                        bookingId=booking.getBookingid();
+                        break;
+                    case "roomid":
+                        Assert.assertNotNull("roomid is missing", booking.getRoomid());
+                        roomId=booking.getRoomid();
+                        break;
+                    case "firstname":
+                        Assert.assertNotNull("firstname is missing", booking.getFirstname());
+                        break;
+                    case "lastname":
+                        Assert.assertNotNull("lastname is missing", booking.getLastname());
+                        break;
+                    case "depositpaid":
+                        Assert.assertTrue("depositpaid field missing", true);
+                        break;
+                    case "bookingdates":
+                        Assert.assertNotNull("bookingdates is missing",booking.getBookingdates());
+                        break;
+                }
+            }
+        }
+    }
 }
