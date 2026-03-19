@@ -88,12 +88,16 @@ mvn clean verify
 ## 💡 Features
 The test suite covers the following scenarios:
 
-- Creating a new booking with valid data
-- Creating a new booking with invalid data
-- Retrieving a booking by ID
-- Updating a booking
-- Deleting a booking
-- Retrieving a non-existent booking
+- Authentication of user
+- Fetch List of rooms
+- Check Availability
+- View the room details
+- Creating a booking
+- Fetch Room Summary
+- Fetch Booking details by Room ID
+- Fetch Booking details by Booking ID
+- Editing/Deleting a booking
+- Fetch the booking report
 
 📊 Test Reports (Serenity)
 
