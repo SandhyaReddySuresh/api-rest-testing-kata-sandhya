@@ -1,7 +1,7 @@
 
 ## 📌 Project Overview
 This repository contains a solution to the API Testing Kata, a challenge designed in API testing using Java, Rest-Assured, and Cucumber. The goal of this kata is to create a comprehensive test suite for a booking API, covering various scenarios and edge cases.
-It automates hotel api booking flow on [automationintesting.online]([https://www.booking.com](https://automationintesting.online/api/booking?roomid=).
+It automates hotel api booking flow on [automationintesting.online]([(https://automationintesting.online]).
 This project is an API automation testing framework built using:
 - Serenity BDD  
 - Cucumber  

@@ -22,9 +22,9 @@ So that I can reserve my stay and receive a booking confirmation with all detail
 
     Examples:
       | roomid | firstname  | lastname  | depositpaid | checkin    | checkout   | phone       |
-      | 114    | EFirstName | FLastName | false       | 2026-07-16 | 2026-07-18 | 07358480685 |
-      | 115    | arjun      | kumar     | true        | 2026-08-01 | 2026-08-05 | 07123456789 |
-      | 116    | priya      | singh     | false       | 2026-09-10 | 2026-09-12 | 07987654321 |
+      | 117    | EFirstName | FLastName | false       | 2026-07-16 | 2026-07-18 | 07358480685 |
+      | 118    | arjun      | kumar     | true        | 2026-08-01 | 2026-08-05 | 07123456789 |
+      | 119    | priya      | singh     | false       | 2026-09-10 | 2026-09-12 | 07987654321 |
 
 
   Scenario Outline: Booking fails with invalid or missing input data
