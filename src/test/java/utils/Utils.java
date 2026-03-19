@@ -115,8 +115,11 @@ public class Utils {
     {
         System.out.println(response.toString());
         String statusCodeResponse= String.valueOf(response.statusCode());
-        Assert.assertEquals(statusCodeResponse,statusCode);
-
+        Assert.assertEquals(
+                "Expected status code " + statusCode + " but got " + statusCodeResponse,
+                statusCode,
+                statusCodeResponse
+        );
     }
 
 }

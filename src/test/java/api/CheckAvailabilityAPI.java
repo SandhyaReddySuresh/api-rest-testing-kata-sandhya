@@ -42,10 +42,7 @@ public class CheckAvailabilityAPI extends Utils {
     public static void checkStatusCode(String statusCode)throws IOException
 
     {
-        System.out.println(response.toString());
-        String statusCodeResponse= String.valueOf(response.statusCode());
-        Assert.assertEquals("Success status reponse",statusCode,statusCodeResponse);
-
+        checkStatusCode(response,statusCode);
     }
     public static void verifyRoomsListResponse() {
         roomListDetails = response.as(ListRoomDetails.class);
