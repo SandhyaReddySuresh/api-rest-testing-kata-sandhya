@@ -50,4 +50,16 @@ public class UpdateBookingAPI extends Utils {
         Assert.assertEquals(statusCodeResponse,statusCode);
 
     }
+
+
+    public static void checkUpdateDetails_InResponse()
+    {
+
+        Assert.assertEquals("Booking ID from the details does not match the created booking ID",
+                BookingDetailsByRoomIdAPI.bookingId, CreateBookingAPI.bookingID);
+
+        Assert.assertEquals("Room ID from the details does not match the created booking's room ID",
+                BookingDetailsByRoomIdAPI.roomId, CreateBookingAPI.roomId);
+    }
+
 }

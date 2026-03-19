@@ -22,10 +22,22 @@ Feature: Edit hotel booking
     And a room Id should be returned
     Examples:
       | roomid | firstname | lastname | depositpaid | checkin    | checkout   | phone       |
-      | 36     | trisha4   | vijay6   | false       | 2026-07-16 | 2026-07-18 | 07358480685 |
+      | 37     | trisha4   | vijay6   | false       | 2026-07-16 | 2026-07-18 | 07358480685 |
 
   Scenario: Update an existing booking
     When the user updates the existing booking with the following details:
       | firstname | lastname | depositpaid | checkin    | checkout   |
       | Lion      | Dear     | false       | 2026-01-11 | 2026-01-12 |
     Then the booking should be successfully updated
+
+  Scenario: View updated booking details for a room
+    When the customer views the booking details for that updated room
+    Then the booking details should reflect the latest updates
+    And the booking should include:
+      | bookingid     |
+      | roomid        |
+      | firstname     |
+      | lastname      |
+      | depositpaid   |
+      | bookingdates  |
+    And the response should match the booking JSON schema

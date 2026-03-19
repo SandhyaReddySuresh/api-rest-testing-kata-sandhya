@@ -1,5 +1,6 @@
 package stepDefinitions;
 
+import api.BookingDetailsByRoomIdAPI;
 import api.CreateBookingAPI;
 import api.UpdateBookingAPI;
 import io.cucumber.datatable.DataTable;
@@ -29,5 +30,20 @@ public class UpdateBookingSteps {
     public void theBookingShouldBeSuccessfullyUpdated() throws IOException {
         int statusCode= ConfigReader.getIntProperty("SuccessStatusCode");
         UpdateBookingAPI.checkStatusCode(String.valueOf(statusCode));
+    }
+
+    @When("the customer views the booking details for that updated room")
+    public void theCustomerViewsTheBookingDetailsForThatUpdatedRoom() throws IOException {
+        String resourceDetails="CreateBookingAPI";
+        APIResources resourcesAPI=APIResources.valueOf(resourceDetails);
+        BookingDetailsByRoomIdAPI.getBookingDetailsById(resourcesAPI.getResources(), String.valueOf(CreateBookingAPI.roomId));
+        int statusCode= ConfigReader.getIntProperty("SuccessStatusCode");
+        BookingDetailsByRoomIdAPI.checkStatusCode(String.valueOf(statusCode));
+    }
+
+    @Then("the booking details should reflect the latest updates")
+    public void theBookingDetailsShouldReflectTheLatestUpdates() throws IOException {
+        BookingDetailsByRoomIdAPI.getBookingAndRoomId_FromResponse();
+         UpdateBookingAPI.checkUpdateDetails_InResponse();
     }
 }

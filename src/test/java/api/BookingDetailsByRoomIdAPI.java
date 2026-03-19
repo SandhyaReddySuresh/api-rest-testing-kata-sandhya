@@ -53,6 +53,15 @@ public class BookingDetailsByRoomIdAPI extends Utils {
         Assert.assertEquals("Success status response", statusCodeResponse, statusCode);
 
     }
+
+    public static void getBookingAndRoomId_FromResponse() {
+        bookingListDetails = response.as(BookingDetails.class);
+        for (BookingResponse booking : bookingListDetails.getBookings()) {
+            bookingId=booking.getBookingid();
+            roomId=booking.getRoomid();
+
+        }
+        }
     public static void verifyEachBookingDetails_FromResponse(List<String> expectedFields ) {
         bookingListDetails = response.as(BookingDetails.class);
 
@@ -110,4 +119,5 @@ public class BookingDetailsByRoomIdAPI extends Utils {
 
         }
     }
+
 }
