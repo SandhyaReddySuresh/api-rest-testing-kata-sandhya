@@ -22,7 +22,7 @@ Feature: Edit hotel booking
     And a room Id should be returned
     Examples:
       | roomid | firstname  | lastname  | depositpaid | checkin    | checkout   | phone       |
-      | 40     | KFirstName | DLastName | false       | 2026-07-16 | 2026-07-18 | 07387480685 |
+      | 41     | KFirstName | DLastName | false       | 2026-07-16 | 2026-07-18 | 07387480685 |
 
   Scenario: Update an existing booking
     When the user updates the existing booking with the following details:
